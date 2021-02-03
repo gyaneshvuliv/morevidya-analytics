@@ -1,0 +1,350 @@
+// begin #top-menu
+#top-menu.top-menu(ng-controller='topMenuController')
+  .container-fluid
+    // begin top-menu nav
+    ul.nav
+      li.has-sub(ng-class="{active:$state.includes('app.dashboard')}")
+        a(href='javascript:;')
+          b.caret.pull-right
+          i.fa.fa-laptop
+          span Dashboard
+        ul.sub-menu
+          li(ui-sref-active='active')
+            a(ui-sref='app.dashboard.v1') Dashboard v1
+          li(ui-sref-active='active')
+            a(ui-sref='app.dashboard.v2') Dashboard v2
+      // stream menu start
+      li.has-sub(ng-class="{active:$state.includes('app.stream')}")
+        a(href='javascript:;')
+          span.badge.pull-right 10
+          i.fa.fa-youtube-play
+          span Stream
+        ul.sub-menu
+          li(ui-sref-active='active')
+            a(ui-sref='app.stream.analysis') Analysis
+          li(ui-sref-active='active')
+            a(ui-sref='app.stream.view') View
+      // stream menu end
+      // Events menu start
+      li.has-sub(ng-class="{active:$state.includes('app.event')}")
+        a(href='javascript:;')
+          span.badge.pull-right 10
+          i.fa.fa-youtube-play
+          span Events
+        ul.sub-menu
+          li(ui-sref-active='active')
+            a(ui-sref='app.event.analysis') Analysis
+          li(ui-sref-active='active')
+            a(ui-sref='app.event.summary') Event Summary
+          li(ui-sref-active='active')
+            a(ui-sref='app.event.user.path') User Path
+          li(ui-sref-active='active')
+            a(ui-sref='app.event.logs') Event Logs
+          li(ui-sref-active='active')
+            a(ui-sref='app.event.funnel') Funnel
+      // Events menu end
+      li.has-sub(ng-class="{active:$state.includes('app.email')}")
+        a(href='javascript:;')
+          span.badge.pull-right 10
+          i.fa.fa-inbox
+          span Email
+        ul.sub-menu
+          li(ui-sref-active='active')
+            a(ui-sref='app.email.inbox') Inbox v1
+          li(ui-sref-active='active')
+            a(ui-sref='app.email.inbox-v2') Inbox v2
+          li(ui-sref-active='active')
+            a(ui-sref='app.email.compose') Compose
+          li(ui-sref-active='active')
+            a(ui-sref='app.email.detail') Detail
+      li.has-sub(ng-class="{active:$state.includes('app.ui')}")
+        a(href='javascript:;')
+          b.caret.pull-right
+          i.fa.fa-suitcase
+          span UI Elements
+        ul.sub-menu
+          li(ui-sref-active='active')
+            a(ui-sref='app.ui.general') General
+          li(ui-sref-active='active')
+            a(ui-sref='app.ui.typography') Typography
+          li(ui-sref-active='active')
+            a(ui-sref='app.ui.tabsAccordions') Tabs & Accordions
+          li(ui-sref-active='active')
+            a(ui-sref='app.ui.unlimitedTabs') Unlimited Nav Tabs
+          li(ui-sref-active='active')
+            a(ui-sref='app.ui.modalNotification') Modal & Notification
+          li(ui-sref-active='active')
+            a(ui-sref='app.ui.widgetBoxes') Widget Boxes
+          li(ui-sref-active='active')
+            a(ui-sref='app.ui.mediaObject') Media Object
+          li(ui-sref-active='active')
+            a(ui-sref='app.ui.buttons') Buttons
+          li(ui-sref-active='active')
+            a(ui-sref='app.ui.icons') Icons
+          li(ui-sref-active='active')
+            a(ui-sref='app.ui.simpleLineIcons') Simple Line Icons
+          li(ui-sref-active='active')
+            a(ui-sref='app.ui.ionicons') Ionicons
+          li(ui-sref-active='active')
+            a(ui-sref='app.ui.tree') Tree View
+          li(ui-sref-active='active')
+            a(ui-sref='app.ui.languageBarIcon') Language Bar & Icon
+      li.has-sub(ng-class="{active:$state.includes('app.form')}")
+        a(href='javascript:;')
+          b.caret.pull-right
+          i.fa.fa-file-o
+          span Form Stuff
+        ul.sub-menu
+          li(ui-sref-active='active')
+            a(ui-sref='app.form.elements') Form Elements
+          li(ui-sref-active='active')
+            a(ui-sref='app.form.plugins') Form Plugins
+          li(ui-sref-active='active')
+            a(ui-sref='app.form.sliderSwitcher') Form Slider + Switcher
+          li(ui-sref-active='active')
+            a(ui-sref='app.form.validation') Form Validation
+      li.has-sub(ng-class="{active:$state.includes('app.table')}")
+        a(href='javascript:;')
+          b.caret.pull-right
+          i.fa.fa-th
+          span
+            | Tables  
+            span.label.label-theme.m-l-5 NEW
+        ul.sub-menu
+          li(ui-sref-active='active')
+            a(ui-sref='app.table.basic') Basic Tables
+          li.has-sub(ng-class="{active:$state.includes('app.table.manage')}")
+            a(href='javascript:;')
+              b.caret.pull-right
+              |  Managed Tables
+            ul.sub-menu
+              li(ui-sref-active='active')
+                a(ui-sref='app.table.manage.default') Default
+              li(ui-sref-active='active')
+                a(ui-sref='app.table.manage.autofill') Autofill
+              li(ui-sref-active='active')
+                a(ui-sref='app.table.manage.buttons') Buttons
+              li(ui-sref-active='active')
+                a(ui-sref='app.table.manage.colReorder') ColReorder
+              li(ui-sref-active='active')
+                a(ui-sref='app.table.manage.fixedColumns') Fixed Columns
+              li(ui-sref-active='active')
+                a(ui-sref='app.table.manage.fixedHeader') Fixed Header
+              li(ui-sref-active='active')
+                a(ui-sref='app.table.manage.keyTable') KeyTable
+              li(ui-sref-active='active')
+                a(ui-sref='app.table.manage.responsive') Responsive
+              li(ui-sref-active='active')
+                a(ui-sref='app.table.manage.rowReorder')
+                  | RowReorder 
+                  i.fa.fa-paper-plane.text-theme.m-l-5
+              li(ui-sref-active='active')
+                a(ui-sref='app.table.manage.scroller') Scroller
+              li(ui-sref-active='active')
+                a(ui-sref='app.table.manage.select') Select
+              li(ui-sref-active='active')
+                a(ui-sref='app.table.manage.combine') Extension Combination
+      li.has-sub
+        a(href='javascript:;')
+          b.caret.pull-right
+          i.fa.fa-star
+          span Front End
+        ul.sub-menu
+          li
+            a(href='../../frontend/one-page-parallax/template_content_html/index.html', target='_blank') One Page Parallax
+          li
+            a(href='../../frontend/blog/template_content_html/index.html', target='_blank') Blog
+          li
+            a(href='../../frontend/forum/template_content_html/index.html', target='_blank') Forum
+      li.has-sub
+        a(href='javascript:;')
+          b.caret.pull-right
+          i.fa.fa-envelope
+          span Email Template
+        ul.sub-menu
+          li
+            a(href='views/email_system.html', target='_blank') System Template
+          li
+            a(href='views/email_newsletter.html', target='_blank') Newsletter Template
+      li.has-sub(ng-class="{active:$state.includes('app.chart')}")
+        a(href='javascript:;')
+          b.caret.pull-right
+          i.fa.fa-area-chart
+          span
+            | Chart 
+            span.label.label-theme.m-l-5 NEW
+        ul.sub-menu
+          li(ui-sref-active='active')
+            a(ui-sref='app.chart.flot') Flot Chart
+          li(ui-sref-active='active')
+            a(ui-sref='app.chart.morris') Morris Chart
+          li(ui-sref-active='active')
+            a(ui-sref='app.chart.js') Chart JS
+          li(ui-sref-active='active')
+            a(ui-sref='app.chart.d3')
+              | d3 Chart 
+              i.fa.fa-paper-plane.text-theme.m-l-5
+      li(ui-sref-active='active')
+        a(ui-sref='app.calendar')
+          i.fa.fa-calendar
+          span Calendar
+      li.has-sub(ng-class="{active:$state.includes('app.map')}")
+        a(href='javascript:;')
+          b.caret.pull-right
+          i.fa.fa-map-marker
+          span Map
+        ul.sub-menu
+          li(ui-sref-active='active')
+            a(ui-sref='app.map.vector') Vector Map
+          li(ui-sref-active='active')
+            a(ui-sref='app.map.google') Google Map
+      li.has-sub(ng-class="{active:$state.includes('app.gallery')}")
+        a(href='javascript:;')
+          b.caret.pull-right
+          i.fa.fa-camera
+          span Gallery
+        ul.sub-menu
+          li(ui-sref-active='active')
+            a(ui-sref='app.gallery.v1') Gallery v1
+          li(ui-sref-active='active')
+            a(ui-sref='app.gallery.v2') Gallery v2
+      li.has-sub(ng-class="{active:$state.includes('app.options')}")
+        a(href='javascript:;')
+          b.caret.pull-right
+          i.fa.fa-cogs
+          span
+            | Page Options 
+            span.label.label-theme.m-l-5 NEW
+        ul.sub-menu
+          li(ui-sref-active='active')
+            a(ui-sref='app.options.pageBlank') Blank Page
+          li(ui-sref-active='active')
+            a(ui-sref='app.options.pageWithFooter') Page with Footer
+          li(ui-sref-active='active')
+            a(ui-sref='app.options.pageWithoutSidebar') Page without Sidebar
+          li(ui-sref-active='active')
+            a(ui-sref='app.options.pageWithRightSidebar') Page with Right Sidebar
+          li(ui-sref-active='active')
+            a(ui-sref='app.options.pageWithMinifiedSidebar') Page with Minified Sidebar
+          li(ui-sref-active='active')
+            a(ui-sref='app.options.pageWithTwoSidebar') Page with Two Sidebar
+          li(ui-sref-active='active')
+            a(ui-sref='app.options.pageFullHeightContent') Full Height Content
+          li(ui-sref-active='active')
+            a(ui-sref='app.options.pageWithWideSidebar') Page with Wide Sidebar
+          li(ui-sref-active='active')
+            a(ui-sref='app.options.pageWithLightSidebar') Page with Light Sidebar
+          li(ui-sref-active='active')
+            a(ui-sref='app.options.pageWithMegaMenu') Page with Mega Menu
+          li(ui-sref-active='active')
+            a(ui-sref='app.options.pageWithTopMenu')
+              | Page with Top Menu 
+              i.fa.fa-paper-plane.text-theme.m-l-5
+          li(ui-sref-active='active')
+            a(ui-sref='app.options.pageWithBoxedLayout')
+              | Page with Boxed Layout 
+              i.fa.fa-paper-plane.text-theme.m-l-5
+          li(ui-sref-active='active')
+            a(ui-sref='app.options.pageWithMixedMenu')
+              | Page with Mixed Menu 
+              i.fa.fa-paper-plane.text-theme.m-l-5
+          li(ui-sref-active='active')
+            a(ui-sref='app.options.pageWithBoxedMixedMenu')
+              | Boxed Layout with Mixed Menu 
+              i.fa.fa-paper-plane.text-theme.m-l-5
+          li(ui-sref-active='active')
+            a(ui-sref='app.options.pageWithTransparentSidebar')
+              | Page with Transparent Sidebar 
+              i.fa.fa-paper-plane.text-theme.m-l-5
+      li.has-sub(ng-class="{active:$state.includes('app.extra')}")
+        a(href='javascript:;')
+          b.caret.pull-right
+          i.fa.fa-gift
+          span Extra
+        ul.sub-menu
+          li(ui-sref-active='active')
+            a(ui-sref='app.extra.timeline') Timeline
+          li(ui-sref-active='active')
+            a(ui-sref='comingSoon') Coming Soon Page
+          li(ui-sref-active='active')
+            a(ui-sref='app.extra.searchResults') Search Results
+          li(ui-sref-active='active')
+            a(ui-sref='app.extra.invoice') Invoice
+          li(ui-sref-active='active')
+            a(ui-sref='error') 404 Error Page
+          li(ui-sref-active='active')
+            a(ui-sref='app.extra.profile') Profile Page
+      li.has-sub
+        a(href='javascript:;')
+          b.caret.pull-right
+          i.fa.fa-key
+          span Login & Register
+        ul.sub-menu
+          li(ui-sref-active='active')
+            a(ui-sref='login-v1') Login
+          li(ui-sref-active='active')
+            a(ui-sref='login-v2') Login v2
+          li(ui-sref-active='active')
+            a(ui-sref='login-v3') Login v3
+          li(ui-sref-active='active')
+            a(ui-sref='register') Register v3
+      li.has-sub
+        a(href='javascript:;')
+          b.caret.pull-right
+          i.fa.fa-cubes
+          span
+            | Version 
+            span.label.label-theme.m-l-5 NEW
+        ul.sub-menu
+          li
+            a(href='../template_content_html/index.html') HTML
+          li
+            a(href='../template_content_ajax/index.html') AJAX
+          li
+            a(href='javascript:;')
+              | ANGULAR JS
+              i.fa.fa-paper-plane.text-theme.m-l-5
+      li.has-sub(ng-class="{active:$state.includes('app.helper')}")
+        a(href='javascript:;')
+          b.caret.pull-right
+          i.fa.fa-medkit
+          span Helper
+        ul.sub-menu
+          li(ui-sref-active='active')
+            a(ui-sref='app.helper.css') Predefined CSS Classes
+      li.has-sub
+        a(href='javascript:;')
+          b.caret.pull-right
+          i.fa.fa-align-left
+          span Menu Level
+        ul.sub-menu
+          li.has-sub
+            a(href='javascript:;')
+              b.caret.pull-right
+              |                         Menu 1.1
+            ul.sub-menu
+              li.has-sub
+                a(href='javascript:;')
+                  b.caret.pull-right
+                  |                                 Menu 2.1
+                ul.sub-menu
+                  li
+                    a(href='javascript:;') Menu 3.1
+                  li
+                    a(href='javascript:;') Menu 3.2
+              li
+                a(href='javascript:;') Menu 2.2
+              li
+                a(href='javascript:;') Menu 2.3
+          li
+            a(href='javascript:;') Menu 1.2
+          li
+            a(href='javascript:;') Menu 1.3
+      li.menu-control.menu-control-left
+        a(href='#', data-click='prev-menu')
+          i.fa.fa-angle-left
+      li.menu-control.menu-control-right
+        a(href='#', data-click='next-menu')
+          i.fa.fa-angle-right
+    // end top-menu nav
+// end #top-menu</body></html>

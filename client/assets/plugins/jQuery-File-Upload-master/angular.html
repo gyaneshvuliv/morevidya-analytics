@@ -1,0 +1,37 @@
+<style>
+/* Hide Angular JS elements before initializing */
+.ng-cloak {
+    display: none;
+}
+</style>
+<div ng-controller="categoryController">
+    <!-- begin breadcrumb -->
+    <ol class="breadcrumb pull-right">
+        <li><a href="javascript:;">Home</a></li>
+        <li><a href="javascript:;">Category</a></li>
+        <li class="active">Add New Category</li>
+    </ol>
+    <!-- end breadcrumb -->
+    <!-- begin page-header -->
+    <h1 class="page-header">Category <small>header small text goes here...</small></h1>
+    <!-- end page-header -->
+    
+    
+    <form class="form-horizontal" name="validationForm" ng-submit="submitForm(validationForm)" novalidate>
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="fullname">Name <span class="text-danger">*</span></label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" ng-model="form.fullname" name="fullname" placeholder="Required" required />
+            </div>
+        </div>
+        <div class="form-group">
+          <ng-upload-form url="/api/fileupload" auto-upload="true" size-limit="500000"></ng-upload-form>
+      </div>
+      <div class="form-group m-b-0">
+        <label class="control-label col-sm-3"></label>
+        <div class="col-sm-6">
+            <button type="submit" class="btn btn-success width-xs">Submit</button>
+        </div>
+    </div>
+</form>
+</div>

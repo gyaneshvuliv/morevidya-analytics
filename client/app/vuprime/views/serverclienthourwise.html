@@ -1,0 +1,50 @@
+<!-- begin row -->
+<div class="row" ng-controller="serverclienthourwiseController">
+    <!-- begin col-12 -->
+    <div class="col-md-12">
+        <div class="panel panel-inverse">
+            <div class="panel-heading">
+                <div class="panel-heading-btn">
+                    <span>{{dateSelectorHourBand}}</span>
+                    <a id="eventcathourWise" class="btn btn-xs btn-icon btn-primary"><i class="fa fa-calendar"></i></a>
+                    <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                    <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+                    <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                    <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+                </div>
+                <h4 class="panel-title" style="display: inline;">Server Client Connection Hour Wise-Statistics<span><b>&nbsp;Total Servers : {{server_count}} Total Clients : {{client_count}}</b></span>
+            </div>
+            <div class="alert alert-info fade in">
+                <button type="button" class="close" data-dismiss="alert">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                Server Client Connection Hour Wise comparison graph will be displayed here. (* 30 minutes caching)
+            </div>
+            <div class="row">
+                <div class="panel-body" style="height:420px;">
+                    <div style='font-size:14px;margin-left: 10px;float: left;'>
+                        <select class="form-control" data-container='body' style="width: 209px;" ng-model="daysfilter" data-ng-change="getData()"> 
+                            <option selected="selected" value="" >Select Days Filter</option>
+                            <option value='0' >Last 5 Monday</option>
+                            <option value='1' >Last 5 Tuesday</option>
+                            <option value='2' >Last 5 Wednesday</option>
+                            <option value='3' >Last 5 Thursday</option>
+                            <option value='4' >Last 5 Friday</option>
+                            <option value='5' >Last 5 Saturday</option>
+                            <option value='6' >Last 5 Sunday</option>
+                        </select>
+                    </div>
+                    <!-- <div style='font-size:14px;margin-left: 10px;float: left;'>
+                        <select class="form-control" data-container='body' style="width: 209px;" ng-model="version" data-ng-change="getData()">
+                            <option selected="selected" value="" >Select Version</option>
+                            <option data-ng-repeat="item in versions" value='{{item.version}}' >{{item.version}}</option>
+                        </select>
+                    </div> -->
+                    <div id="events-cat" class="height-sm"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end col-12 -->
+</div>
+<!-- end row -->

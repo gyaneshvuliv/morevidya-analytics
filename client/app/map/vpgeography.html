@@ -1,0 +1,36 @@
+<div ng-controller="vpmapGoogleController">
+        <!-- begin breadcrumb -->
+        <ol class="breadcrumb pull-right">
+            <li><a href="javascript:;">Home</a></li>
+            <li><a href="javascript:;">Map</a></li>
+            <li class="active">Play View Map</li>
+        </ol>
+        <!-- end breadcrumb -->
+        <!-- begin page-header -->
+        <h1 class="page-header">Real Time Vuliv Map View <small></small></h1>
+        <!-- end page-header -->
+        
+        <div class="map-content">
+            <div class="btn-group map-btn pull-right">
+                <button type="button" class="btn btn-sm btn-inverse btn-danger" id="map-activity-text">Play View</button>
+                <button type="button" class="btn btn-sm btn-inverse dropdown-toggle" data-toggle="dropdown">
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" id="map-activity-selection">
+                    <!-- <li><a href="javascript:;" data-map-activity="All">All</a></li> -->
+                    <!-- <li><a href="javascript:;" data-map-activity="new-wallet">New Wallet Creation</a></li>
+                    <li><a href="javascript:;" data-map-activity="wallet-transaction">Wallet Transaction</a></li> -->
+                    <li class="active"><a href="javascript:;" data-map-activity="play-view">Play View</a></li>
+                    <li><a href="javascript:;" data-map-activity="ads-view">Ads View</a></li>
+                    <!-- <li><a href="javascript:;" data-map-activity="deals-view">Deals</a></li> -->
+                    <!-- <li><a href="javascript:;" data-map-activity="dau">Daily Active User</a></li> -->
+                    <!-- <li><a href="javascript:;" data-map-activity="my-media-view">My Media View</a></li> -->
+                    <!-- <li><a href="javascript:;" data-map-activity="campaing-view">Campaign View</a></li> -->
+                    <!-- <li><a href="javascript:;" data-map-activity="ads-view">Ads View</a></li> -->
+                </ul>
+            </div>
+        </div>
+        <div class="map">
+            <div id="google-map-default" class="height-full width-full"></div>
+        </div>
+    </div>

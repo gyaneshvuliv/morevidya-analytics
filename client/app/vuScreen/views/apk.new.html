@@ -1,0 +1,21 @@
+<div ng-controller="apkController">
+    <!-- begin breadcrumb -->
+    <ol class="breadcrumb pull-right">
+        <li><a href="javascript:;">Home</a></li>
+        <li class="active">APK</li>
+    </ol>
+    <!-- end breadcrumb -->
+    <!-- begin page-header -->
+    <h1 class="page-header">APK <small></small></h1>
+    <!-- end page-header -->
+    <div class="col-md-3" ng-repeat="item in docList">
+        <!-- <div class="m-b-10 f-s-10"><b class="text-inverse">EXAMPLE</b></div> -->
+        <div class="card" >
+            <div class="card-block">
+                <h4 class="card-title m-t-0 m-b-10">{{item.title}}</h4>
+                <a href="{{item.link}}" class="btn btn-sm btn-primary">Download</a>
+            </div>
+        </div>
+        <!-- end card -->
+    </div>
+</div>	

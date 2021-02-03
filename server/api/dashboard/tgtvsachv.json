@@ -1,0 +1,31 @@
+{
+	"Monthly_Plan" : 
+		{ 
+			"Apr_2017" : { "key" : "Apr-2017-Plan","InstalledBase" : "7.8", "MonthlyActiveUsers" : "1.6", "MVV" : "9.0", "Revenues" : "0.00", "Cost" : "0.00"},
+			"May_2017" : { "key" : "May-2017-Plan","InstalledBase" : "8.9", "MonthlyActiveUsers" : "1.8", "MVV" : "9.8", "Revenues" : "0.00", "Cost" : "0.00"},
+			"Jun_2017" : { "key" : "Jun-2017-Plan","InstalledBase" : "10.00", "MonthlyActiveUsers" : "1.9", "MVV" : "11.1", "Revenues" : "0.00", "Cost" : "0.00"},
+			"Jul_2017" : { "key" : "Jul-2017-Plan","InstalledBase" : "11.2", "MonthlyActiveUsers" : "2.0", "MVV" : "11.5", "Revenues" : "0.00", "Cost" : "0.00"},
+			"Aug_2017" : { "key" : "Aug-2017-Plan","InstalledBase" : "12.6", "MonthlyActiveUsers" : "2.0", "MVV" : "12.3", "Revenues" : "0.00", "Cost" : "0.00"},
+			"Sep_2017" : { "key" : "Sep-2017-Plan","InstalledBase" : "14.0", "MonthlyActiveUsers" : "2.2", "MVV" : "13.8", "Revenues" : "0.00", "Cost" : "0.00"},
+			"Oct_2017" : { "key" : "Oct-2017-Plan","InstalledBase" : "15.3", "MonthlyActiveUsers" : "2.3", "MVV" : "13.2", "Revenues" : "0.00", "Cost" : "0.00"},
+			"Nov_2017" : { "key" : "Nov-2017-Plan","InstalledBase" : "16.7", "MonthlyActiveUsers" : "2.5", "MVV" : "14.0", "Revenues" : "0.00", "Cost" : "0.00"},
+			"Dec_2017" : { "key" : "Dec-2017-Plan","InstalledBase" : "18.0", "MonthlyActiveUsers" : "2.7", "MVV" : "14.7", "Revenues" : "0.00", "Cost" : "0.00"},
+			"Jan_2017" : { "key" : "Jan-2017-Plan","InstalledBase" : "19.4", "MonthlyActiveUsers" : "2.8", "MVV" : "14.9", "Revenues" : "0.00", "Cost" : "0.00"},
+			"Feb_2017" : { "key" : "Feb-2017-Plan","InstalledBase" : "20.6", "MonthlyActiveUsers" : "3.0", "MVV" : "15.0", "Revenues" : "0.00", "Cost" : "0.00"},
+			"Mar_2017" : { "key" : "Mar-2017-Plan","InstalledBase" : "22.0", "MonthlyActiveUsers" : "3.2", "MVV" : "15.4", "Revenues" : "0.00", "Cost" : "0.00"}
+		},
+	"YTD" : 
+		{ 
+			"Jun_2017" : {  "key" : "YTD","MonthlyActiveUsers" : "1.26", "MVV" : "8.66","Revenues" : "0.00", "Cost" : "0.00"},
+			"Jul_2017" : {  "key" : "YTD","MonthlyActiveUsers" : "0.00", "MVV" : "0.00", "Revenues" : "0.00", "Cost" : "0.00"},
+			"Aug_2017" : {  "key" : "YTD","MonthlyActiveUsers" : "0.00", "MVV" : "0.00", "Revenues" : "0.00", "Cost" : "0.00"},
+			"Sep_2017" : {  "key" : "YTD","MonthlyActiveUsers" : "0.00", "MVV" : "0.00", "Revenues" : "0.00", "Cost" : "0.00"},
+			"Oct_2017" : {  "key" : "YTD","MonthlyActiveUsers" : "0.00", "MVV" : "0.00", "Revenues" : "0.00", "Cost" : "0.00"},
+			"Nov_2017" : {  "key" : "YTD","MonthlyActiveUsers" : "0.00", "MVV" : "0.00", "Revenues" : "0.00", "Cost" : "0.00"},
+			"Dec_2017" : {  "key" : "YTD","MonthlyActiveUsers" : "0.00", "MVV" : "0.00", "Revenues" : "0.00", "Cost" : "0.00"},
+			"Jan_2017" : {  "key" : "YTD","MonthlyActiveUsers" : "0.00", "MVV" : "0.00", "Revenues" : "0.00", "Cost" : "0.00"},
+			"Feb_2017" : {  "key" : "YTD","MonthlyActiveUsers" : "0.00", "MVV" : "0.00", "Revenues" : "0.00", "Cost" : "0.00"},
+			"Mar_2017" : {  "key" : "YTD","MonthlyActiveUsers" : "0.00", "MVV" : "0.00", "Revenues" : "0.00", "Cost" : "0.00"}
+		}	
+}
+

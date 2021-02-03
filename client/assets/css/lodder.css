@@ -1,0 +1,22 @@
+#veil {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    cursor: not-allowed;
+    /*filter: alpha(opacity=60);*/
+    /*opacity: 0.6;*/
+    background: #000000 no-repeat center;
+    background-color: rgba(100, 100, 100, 0.3);
+}
+
+#feedLoading {
+    position: absolute;
+    top: 160px;
+    width: 100%;
+    text-align: center;
+    /*font-size: 4em;*/
+    /*color:white;*/
+    /*text-shadow: 2px 2px 2px #021124;*/
+}

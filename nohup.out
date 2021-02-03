@@ -1,0 +1,27 @@
+Express server listening on 5007, in development mode
+Mongoose default connection open to mongodb://52.76.81.227:27017/VuScreen?authSource=admin
+connect to MySQL.
+Express server listening on 8081, in development mode
+103.46.200.142 - - [07/Jul/2020:11:32:43 +0000] "GET /spicescreen/webapi/jsonUpdate HTTP/1.1" 200 - "-" "Dalvik/2.1.0 (Linux; U; Android 7.1.2; Micromax_HS3 Build/N2G47H)"
+103.46.200.142 - - [07/Jul/2020:11:32:43 +0000] "POST /spicescreen/webapi/vuscreen/trackDeviceMemory HTTP/1.1" 404 59 "-" "Dalvik/2.1.0 (Linux; U; Android 7.1.2; Micromax_HS3 Build/N2G47H)"
+103.46.200.142 - - [07/Jul/2020:11:32:44 +0000] "POST /spicescreen/webapi/feedByStorage HTTP/1.1" 404 46 "-" "Dalvik/2.1.0 (Linux; U; Android 7.1.2; Micromax_HS3 Build/N2G47H)"
+103.46.200.142 - - [07/Jul/2020:11:32:44 +0000] "POST /spicescreen/webapi/vuscreen/spicejetTrack HTTP/1.1" 404 55 "-" "Dalvik/2.1.0 (Linux; U; Android 7.1.2; Micromax_HS3 Build/N2G47H)"
+103.46.200.142 - - [07/Jul/2020:11:32:44 +0000] "POST /spicescreen/webapi/vuscreen/spicejetEvent HTTP/1.1" 404 55 "-" "Dalvik/2.1.0 (Linux; U; Android 7.1.2; Micromax_HS3 Build/N2G47H)"
+103.46.200.142 - - [07/Jul/2020:11:32:44 +0000] "GET /spicescreen/webapi/jsonUpdate HTTP/1.1" 200 - "-" "Dalvik/2.1.0 (Linux; U; Android 7.1.2; Micromax_HS3 Build/N2G47H)"
+103.46.200.142 - - [07/Jul/2020:11:32:44 +0000] "GET /spicescreen/webapi/jsonUpdate HTTP/1.1" 200 - "-" "Dalvik/2.1.0 (Linux; U; Android 7.1.2; Micromax_HS3 Build/N2G47H)"
+103.46.200.142 - - [07/Jul/2020:11:32:44 +0000] "POST /spicescreen/webapi/vuscreen/trackDeviceMemory HTTP/1.1" 404 59 "-" "Dalvik/2.1.0 (Linux; U; Android 7.1.2; Micromax_HS3 Build/N2G47H)"
+103.46.200.142 - - [07/Jul/2020:11:32:44 +0000] "POST /spicescreen/webapi/feedByStorage HTTP/1.1" 404 46 "-" "Dalvik/2.1.0 (Linux; U; Android 7.1.2; Micromax_HS3 Build/N2G47H)"
+103.46.200.142 - - [07/Jul/2020:11:32:44 +0000] "GET /spicescreen/webapi/jsonUpdate HTTP/1.1" 200 - "-" "Dalvik/2.1.0 (Linux; U; Android 7.1.2; Micromax_HS3 Build/N2G47H)"
+103.46.200.142 - - [07/Jul/2020:11:32:44 +0000] "POST /spicescreen/webapi/feedByStorage HTTP/1.1" 404 46 "-" "Dalvik/2.1.0 (Linux; U; Android 7.1.2; Micromax_HS3 Build/N2G47H)"
+103.46.200.142 - - [07/Jul/2020:11:32:44 +0000] "POST /spicescreen/webapi/vuscreen/trackDeviceMemory HTTP/1.1" 404 59 "-" "Dalvik/2.1.0 (Linux; U; Android 7.1.2; Micromax_HS3 Build/N2G47H)"
+103.46.200.142 - - [07/Jul/2020:11:32:44 +0000] "POST /spicescreen/webapi/vuscreen/spicejetTrack HTTP/1.1" 404 55 "-" "Dalvik/2.1.0 (Linux; U; Android 7.1.2; Micromax_HS3 Build/N2G47H)"
+103.46.200.142 - - [07/Jul/2020:11:32:44 +0000] "POST /spicescreen/webapi/feedByStorage HTTP/1.1" 404 46 "-" "Dalvik/2.1.0 (Linux; U; Android 7.1.2; Micromax_HS3 Build/N2G47H)"
+103.46.200.142 - - [07/Jul/2020:11:32:44 +0000] "POST /spicescreen/webapi/vuscreen/trackDeviceMemory HTTP/1.1" 404 59 "-" "Dalvik/2.1.0 (Linux; U; Android 7.1.2; Micromax_HS3 Build/N2G47H)"
+103.46.200.142 - - [07/Jul/2020:11:32:44 +0000] "POST /spicescreen/webapi/vuscreen/spicejetEvent HTTP/1.1" 404 55 "-" "Dalvik/2.1.0 (Linux; U; Android 7.1.2; Micromax_HS3 Build/N2G47H)"
+112.133.251.253 - - [07/Jul/2020:11:33:42 +0000] "GET /app/session HTTP/1.1" 401 27 "http://202.21.34.73:8081/" "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+112.133.251.253 - - [07/Jul/2020:11:33:42 +0000] "GET /login HTTP/1.1" 200 - "http://202.21.34.73:8081/" "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+112.133.251.253 - - [07/Jul/2020:11:33:55 +0000] "GET /app/account/login/ HTTP/1.1" 200 - "http://202.21.34.73:8081/login" "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+112.133.251.253 - - [07/Jul/2020:11:34:40 +0000] "POST /auth/local HTTP/1.1" 401 158 "http://202.21.34.73:8081/login" "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+112.133.251.253 - - [07/Jul/2020:11:34:56 +0000] "GET /assets/plugins/jquery/dist/jquery-migrate.min.map HTTP/1.1" 404 497 "-" "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+112.133.251.253 - - [07/Jul/2020:11:35:18 +0000] "POST /auth/local HTTP/1.1" 401 158 "http://202.21.34.73:8081/login" "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+112.133.251.253 - - [07/Jul/2020:11:36:18 +0000] "POST /auth/local HTTP/1.1" 401 158 "http://202.21.34.73:8081/login" "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"

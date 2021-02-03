@@ -1,0 +1,99 @@
+<!-- begin #content -->
+<div ng-controller="apkController">
+	<!-- begin breadcrumb -->
+	<ol class="breadcrumb pull-right">
+		<li><a href="javascript:;">Home</a></li>
+		<li class="active">Document</li>
+	</ol>
+	<!-- end breadcrumb -->
+	<!-- begin page-header -->
+	<h1 class="page-header">Document <small></small></h1>
+	<!-- end page-header -->
+    <div class="col-sm-12 col-md-12 col-lg-12">
+        <div class="card">
+           	<div class="panel-body">
+                    <form action="/" method="POST" data-parsley-validate="true" name="form-wizard">
+						<div id="wizard">
+							<ol>
+								<li>
+								    Select APKS 
+								    <!-- <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</small> -->
+								</li>
+								<li>
+								    Phone No.
+								    <!-- <small>Aliquam bibendum felis id purus ullamcorper, quis luctus leo sollicitudin.</small> -->
+								</li>
+								<li>
+								    Completed
+								    <!-- <small>Sed nunc neque, dapibus non leo sed, rhoncus dignissim elit.</small> -->
+								</li>
+							</ol>
+							<!-- begin wizard step-1 -->
+							<div class="wizard-step-1">
+								<fieldset>
+									<legend class="pull-left width-full">Select APKS </legend>
+									<!-- begin row -->
+									<div class="row">
+										<div class="col-md-3">
+											<div class="checkbox checkbox-css checkbox-inline checkbox-inverse">
+												<input type="checkbox" value="" id="VuScreenb2b" checked="">
+												<label for="VuScreenb2b">
+													VuScreen For Business
+												</label>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="checkbox checkbox-css checkbox-inline checkbox-inverse">
+												<input type="checkbox" value="" id="VuScreenb2c" checked="">
+												<label for="VuScreenb2c">
+													VuScreen For User
+												</label>
+											</div>
+										</div><
+									</div>
+									<!-- end row -->
+								</fieldset>
+								</div>
+							<!-- end wizard step-1 -->
+							<!-- begin wizard step-2 -->
+							<div class="wizard-step-2">
+								<fieldset>
+									<legend class="pull-left width-full">Enter Phone No.</legend>
+                                    <!-- begin row -->
+                                    <div class="row">
+                                        <!-- begin col-6 -->
+                                        <div class="col-md-6">
+											<div class="form-group">
+												<label>Phone Number</label>
+												<input type="text" name="phone" placeholder="1234567890" class="form-control" data-parsley-group="wizard-step-2" data-parsley-type="number" required />
+											</div>
+                                        </div>
+                                        <!-- end col-6 -->
+                                        <!-- begin col-6 -->
+                                        <div class="col-md-6">
+											<div class="form-group">
+												<label>Email Address</label>
+												<input type="email" name="email" placeholder="someone@example.com" class="form-control" data-parsley-group="wizard-step-2" data-parsley-type="email" />
+											</div>
+                                        </div>
+                                        <!-- end col-6 -->
+                                    </div>
+                                    <!-- end row -->
+								</fieldset>
+							</div>
+							<!-- end wizard step-2 -->
+							<!-- begin wizard step-4 -->
+							<div>
+							    <div class="jumbotron m-b-0 text-center">
+                                    <h1>Send Successfully</h1>
+                                </div>
+							</div>
+							<!-- end wizard step-4 -->
+						</div>
+					</form>
+                </div>	
+        </div>
+        <!-- end card -->
+    </div>
+</div>
+<!-- end #content -->

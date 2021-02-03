@@ -1,0 +1,33 @@
+<div ng-controller="galleryController">
+    <!-- begin breadcrumb -->
+    <ol class="breadcrumb pull-right">
+        <li><a href="javascript:;">Home</a></li>
+        <li class="active">Screenflow</li>
+    </ol>
+    <!-- end breadcrumb -->
+    <!-- begin page-header -->
+    <h1 class="page-header">Screen Flow <small></small></h1>
+    <!-- end page-header -->
+    <div id="options" class="m-b-10" >
+        <span class="gallery-option-set" id="filter" data-option-key="filter">
+            <a href="#show-all" class="btn btn-default btn-xs active" data-option-value="*">
+                Show All
+            </a>
+            <a href="#gallery-group-1" class="btn btn-default btn-xs" ng-repeat="item in docList" data-option-value=".{{item.type}}" >
+                {{item.type}}
+            </a>
+        </span>
+    </div>
+    <div id="gallery" class="gallery" ng-repeat="item in docList" on-finish-render="ngRepeatFinished">
+        <div class="image {{item.type}}" ng-repeat="data in item.data"  >
+            <div class="image-inner">
+                <a href="{{data.link}}" data-lightbox="gallery-group-1">
+                    <img src="{{data.link}}" alt=""  />
+                </a>
+                <p class="image-caption">
+                    {{data.title}}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>	

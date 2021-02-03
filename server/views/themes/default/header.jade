@@ -1,0 +1,259 @@
+// begin #header
+#header.header.navbar.navbar-default.navbar-fixed-top(ng-controller='headerController')
+  // begin container-fluid
+  .container-fluid
+    // begin mobile sidebar expand / collapse button
+    .navbar-header
+      a.navbar-brand(href='index.html')
+        // <span class="navbar-logo"></span> TimeBomb
+        i.fa.fa-clock-o(style='font-size: 32px;')
+        |  TimeBomb
+      button.navbar-toggle(type='button', data-click='sidebar-toggled')
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+    // end mobile sidebar expand / collapse button
+    // begin navbar-collapse
+    #top-navbar.collapse.navbar-collapse.pull-left(ng-if='setting.layout.pageMegaMenu === true')
+      ul.nav.navbar-nav
+        li.dropdown.dropdown-lg
+          a.dropdown-toggle(href='#', data-toggle='dropdown')
+            i.fa.fa-th-large.fa-fw
+            |  Mega 
+            b.caret
+          .dropdown-menu.dropdown-menu-lg
+            .row
+              .col-md-4.col-sm-4
+                h4.dropdown-header UI Kits
+                .row
+                  .col-md-6.col-xs-6
+                    ul.nav
+                      li
+                        a.text-ellipsis(href='#')
+                          i.fa.fa-angle-right.fa-fw.fa-lg.text-inverse
+                          |  FontAwesome
+                      li
+                        a.text-ellipsis(href='#')
+                          i.fa.fa-angle-right.fa-fw.fa-lg.text-inverse
+                          |  Ionicons
+                      li
+                        a.text-ellipsis(href='#')
+                          i.fa.fa-angle-right.fa-fw.fa-lg.text-inverse
+                          |  Simple Line Icons
+                      li
+                        a.text-ellipsis(href='#')
+                          i.fa.fa-angle-right.fa-fw.fa-lg.text-inverse
+                          |  Typography
+                      li
+                        a.text-ellipsis(href='#')
+                          i.fa.fa-angle-right.fa-fw.fa-lg.text-inverse
+                          |  Media Object
+                      li
+                        a.text-ellipsis(href='#')
+                          i.fa.fa-angle-right.fa-fw.fa-lg.text-inverse
+                          |  Widget Boxes
+                      li
+                        a.text-ellipsis(href='#')
+                          i.fa.fa-angle-right.fa-fw.fa-lg.text-inverse
+                          |  Tabs & Accordions
+                  .col-md-6.col-xs-6
+                    ul.nav
+                      li
+                        a.text-ellipsis(href='#')
+                          i.fa.fa-angle-right.fa-fw.fa-lg.text-inverse
+                          |  Unlimited Nav Tabs
+                      li
+                        a.text-ellipsis(href='#')
+                          i.fa.fa-angle-right.fa-fw.fa-lg.text-inverse
+                          |  Modal & Notification
+                      li
+                        a.text-ellipsis(href='#')
+                          i.fa.fa-angle-right.fa-fw.fa-lg.text-inverse
+                          |  Buttons
+              .col-md-4.col-sm-4
+                h4.dropdown-header
+                  | Page Options 
+                  span.label.label-inverse 11
+                .row
+                  .col-md-6.col-xs-6
+                    ul.nav
+                      li
+                        a.text-ellipsis(href='#')
+                          i.fa.fa-angle-right.fa-fw.fa-lg.text-inverse
+                          |  Blank Page
+                      li
+                        a.text-ellipsis(href='#')
+                          i.fa.fa-angle-right.fa-fw.fa-lg.text-inverse
+                          |  Page with Footer 
+                          span.badge.badge-success NEW
+                      li
+                        a.text-ellipsis(href='#')
+                          i.fa.fa-angle-right.fa-fw.fa-lg.text-inverse
+                          |  Page without Sidebar
+                      li
+                        a.text-ellipsis(href='#')
+                          i.fa.fa-angle-right.fa-fw.fa-lg.text-inverse
+                          |  Page with Right Sidebar
+                      li
+                        a.text-ellipsis(href='#')
+                          i.fa.fa-angle-right.fa-fw.fa-lg.text-inverse
+                          |  Page with Minified Sidebar
+                      li
+                        a.text-ellipsis(href='#')
+                          i.fa.fa-angle-right.fa-fw.fa-lg.text-inverse
+                          |  Page with Two Sidebar
+                      li
+                        a.text-ellipsis(href='#')
+                          i.fa.fa-angle-right.fa-fw.fa-lg.text-inverse
+                          |  Page with Line Icons
+                  .col-md-6.col-xs-6
+                    ul.nav
+                      li
+                        a.text-ellipsis(href='#')
+                          i.fa.fa-angle-right.fa-fw.fa-lg.text-inverse
+                          |  Full Height Content
+                      li
+                        a.text-ellipsis(href='#')
+                          i.fa.fa-angle-right.fa-fw.fa-lg.text-inverse
+                          |  Page with Mega Menu
+                      li
+                        a.text-ellipsis(href='#')
+                          i.fa.fa-angle-right.fa-fw.fa-lg.text-inverse
+                          |  Page with Light Sidebar
+                      li
+                        a.text-ellipsis(href='#')
+                          i.fa.fa-angle-right.fa-fw.fa-lg.text-inverse
+                          |  Page with Large Sidebar
+              .col-md-4.col-sm-4
+                h4.dropdown-header Paragraph
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis libero purus, fermentum at libero convallis, auctor dignissim mauris. Nunc laoreet pellentesque turpis sodales ornare. Nunc vestibulum nunc lorem, at sodales velit malesuada congue. Nam est tortor, tincidunt sit amet eros vitae, aliquam finibus mauris.
+                p
+                  | Fusce ac ligula laoreet ante dapibus mattis. Nam auctor vulputate aliquam. Suspendisse efficitur, felis sed elementum eleifend, ipsum tellus sodales nisi, ut condimentum nisi sem in nibh. Phasellus suscipit vulputate purus at venenatis. Quisque luctus tincidunt tempor.
+        li
+          a(href='#')
+            i.fa.fa-diamond.fa-fw
+            |  Client
+        li.dropdown
+          a.dropdown-toggle(href='#', data-toggle='dropdown')
+            i.fa.fa-database.fa-fw
+            |  New 
+            b.caret
+          ul.dropdown-menu(role='menu')
+            li
+              a(href='#') Action
+            li
+              a(href='#') Another action
+            li
+              a(href='#') Something else here
+            li.divider
+            li
+              a(href='#') Separated link
+            li.divider
+            li
+              a(href='#') One more separated link
+    // end navbar-collapse
+    // begin header navigation right
+    ul.nav.navbar-nav.navbar-right
+      li
+        form.navbar-form.full-width
+          .form-group
+            input.form-control(type='text', placeholder='Enter keyword', ng-model='searchText', my-enter='getSearchResult();')
+            button.btn.btn-search(type='submit')
+              i.fa.fa-search
+      li.dropdown
+        a.dropdown-toggle.f-s-14(href='javascript:;', data-toggle='dropdown', ng-click='initializeNotification()')
+          i.fa.fa-bell-o
+          span.label {{notification.count}}
+        ul.dropdown-menu.media-list.pull-right.animated.fadeInDown
+          li.dropdown-header Notifications ({{notification.count}})
+          li.media(ng-repeat='item in notification.data')
+            a(href='javascript:;', ng-if="item.type == 'error'")
+              .media-left
+                i.fa.fa-bug.media-object.bg-red
+              .media-body
+                h6.media-heading {{item.title}}
+                .text-muted.f-s-11 {{item.timeSince}}
+            // New campaign
+            a(href='javascript:;', ng-if="item.type == 'campaign'")
+              .media-left
+                img.media-object(src='assets/img/user-1.jpg', alt='')
+              .media-body
+                h6.media-heading {{item.title}}
+                p {{item.timeSince}}
+                .text-muted.f-s-11 {{item.timeSince}}
+            // New User Registered
+            a(href='javascript:;', ng-if="item.type == 'registration'")
+              .media-left
+                i.fa.fa-plus.media-object.bg-green
+              .media-body
+                h6.media-heading  New User Registered
+                .text-muted.f-s-11 {{item.timeSince}}
+            // New Email
+            a(href='javascript:;', ng-if="item.type == 'email'")
+              .media-left
+                i.fa.fa-envelope.media-object.bg-blue
+              .media-body
+                h6.media-heading  New Email From John
+                .text-muted.f-s-11 {{item.timeSince}}
+            // New Email
+            a(href='javascript:;', ng-if="item.type == 'wallet'")
+              .media-left
+                i.fa.fa-envelope.media-object.bg-blue
+              .media-body
+                h6.media-heading  {{item.title}}
+                .text-muted.f-s-11 {{item.timeSince}}
+          li.dropdown-footer.text-center
+            a(ui-sref='app.notification.data') View more
+      li.dropdown.navbar-language(ng-if='setting.layout.pageLanguageBar === true')
+        a.dropdown-toggle(href='javascript:;', data-toggle='dropdown')
+          span.flag-icon.flag-icon-us(title='us')
+          span.name EN
+          b.caret
+        ul.dropdown-menu.animated.fadeInRight.p-b-0
+          li.arrow
+          li
+            a(href='javascript:;')
+              span.flag-icon.flag-icon-us(title='us')
+              |  English
+          li
+            a(href='javascript:;')
+              span.flag-icon.flag-icon-cn(title='cn')
+              |  Chinese
+          li
+            a(href='javascript:;')
+              span.flag-icon.flag-icon-jp(title='jp')
+              |  Japanese
+          li
+            a(href='javascript:;')
+              span.flag-icon.flag-icon-be(title='be')
+              |  Belgium
+          li.divider.m-b-0
+          li.text-center
+            a(href='javascript:;') more options
+      li.dropdown.navbar-user
+        a.dropdown-toggle(href='javascript:;', data-toggle='dropdown')
+          img#profile(src='assets/img/user-13.jpg', alt='')
+          span.hidden-xs #{user.name}
+          b.caret
+        ul.dropdown-menu.animated.fadeInLeft
+          li.arrow
+          li
+            a(href="/settings") Edit Profile
+          li
+            a(href='javascript:;')
+              span.badge.badge-danger.pull-right 2
+              |  Inbox
+          li
+            a(href='javascript:;') Calendar
+          li
+            a(href='javascript:;') Setting
+          li.divider
+          li
+            a(href='javascript:;', ng-click='logout()') Log Out
+      li.hidden-xs(ng-if='setting.layout.pageTwoSidebar === true')
+        a.f-s-14(href='javascript:;', data-click='right-sidebar-toggled')
+          i.fa.fa-th
+    // end header navigation right
+  // end container-fluid
+// end #header</body></html>

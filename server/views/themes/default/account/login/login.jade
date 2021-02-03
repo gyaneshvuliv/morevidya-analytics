@@ -1,0 +1,127 @@
+// begin login
+.login.login-with-news-feed(ng-controller='LoginCtrl')
+  // begin news-feed
+  .news-feed
+    .news-image
+      img(src='assets/images/bg-1.jpg', data-id='login-cover-image', alt='')
+    .news-caption
+      h4.caption-title
+        // i.fa.fa-diamond.text-success
+        // |  VuScreen
+        img(src='assets/images/logo.png', width='55px', style='padding-right: 10px')
+        | VuScreen
+      p
+        | .
+  // end news-feed
+  // begin right-content
+  .right-content
+    // begin login-header
+    .login-header
+      .brand
+        // <span class="logo"></span> VuScreen
+        img(src='assets/images/logo.png', width='55px', style='padding-right: 10px')
+        | VuScreen
+        small
+          | Know more about VuScreen.
+      .icon
+        i.fa.fa-sign-in
+    // end login-header
+    // begin login-content
+    .login-content
+      form.margin-bottom-0(ng-submit='login(loginForm)', novalidate='')
+        .alert.alert-danger.fade.in.m-b-15(ng-show='errors.other')
+          strong Error!
+          |                     {{ errors.other }}
+          span.close(data-dismiss='alert') ×
+        .form-group.m-b-15
+          md-input-container
+            input.form-control.input-lg(required='', type='email', ng-model='user.email', name='email', placeholder='Email Address', autocomplete='on')
+            div(ng-messages='form.email.$error')
+              div(ng-message='required') This is required.
+        .form-group.m-b-15
+          md-input-container
+            input.form-control.input-lg(required='', type='password', ng-model='user.password', name='password', placeholder='Password', autocomplete='on')
+            div(ng-messages='form.password.$error')
+              div(ng-message='required') This is required.
+        // .checkbox.m-b-30
+          label
+            input(type='checkbox', ng-model='chkRememberMe')
+            |  Remember Me
+        .checkbox.m-b-30
+          label
+            input(id='accept' checked type='checkbox')
+            |  Agree to 
+            a(href='#modal-dialog', data-toggle='modal', checked='') Terms and Conditions
+        #modal-dialog.modal.fade
+          .modal-dialog
+              .modal-content
+                .modal-header
+                  button.close(type='button', data-dismiss='modal', aria-hidden='true') &times;
+                  |                 
+                  h4.modal-title CLICK-THROUGH NONDISCLOSURE AGREEMENT
+                |             
+                .modal-body
+                  p
+                    | This Agreement is made between you (the named individual on behalf of the named company in the email, accessing the Proprietary Information and any single legal entity on behalf of which you are acting) (&ldquo;You&rdquo; or &ldquo;you&rdquo;) and
+                  |                 
+                  p
+                    | Mobi Sign Private Ltd. (&ldquo;MSPL&rdquo;), having a principal place of business at 697, Udyog Vihar, Phase V, Gurgugram, India.
+                  |                 
+                  p
+                    | IT IS IMPORTANT THAT YOU READ CAREFULLY AND UNDERSTAND THIS AGREEMENT. BY CLICKING THE &ldquo;I ACCEPT&rdquo; BUTTON LOCATED ON THIS PAGE, YOU AGREE TO BE BOUND BY THIS AGREEMENT. IF YOU DO NOT AGREE WITH ALL THE TERMS OF THIS AGREEMENT AND DO NOT AGREE TO BE BOUND BY THIS AGREEMENT, PLEASE CLICK THE &ldquo;I DO NOT ACCEPT&rdquo; BUTTON. IF YOU DO NOT ACCEPT THIS AGREEMENT, YOU MAY NOT USE OR ACCESS THE PROPRIETARY INFORMATION.
+                  |                 
+                  p
+                    | MSPL wishes to protect and preserve the confidential and/or proprietary nature of information and materials that may be disclosed or made available to you or shared with you in connection with MSPL&rsquo;s business and MSPL&rsquo;s content sourcing, content marketing, content sharing &nbsp;and branding processes, that may be made available on any electronic device with minimum capabilities, (collectively, the &ldquo;MSPL Content Management and Sharing Process&rdquo;); and therefore:
+                  |                 
+                  ol
+                    li
+                      | Proprietary Information, Ownership, Non-Disclosure and Remedies. &ldquo;Proprietary Information&rdquo; means the MSPL Content Management and Sharing Process and any, and all information and materials disclosed during the course of or otherwise in connection with the MSPL Content Management and Sharing Process, including, without limitation, all content on all web pages, applications, wireframes, third party content and its licensing, structuring and hardware information of devices associated with the MSPL Content Management and Sharing Process, provided that any Proprietary Information that becomes publicly known through no wrongful act or omission made by you shall no longer be Proprietary Information.
+                  |                 
+                  p
+                    | Example MSPL proprietary information including wireframe, content typecast, rendering, frame execution, initiation of content sharing, is shared with you on the web, once the Agreement is agreed to.
+                  |                 
+                  p
+                    | All Proprietary Information of MSPL shall remain the sole property of MSPL. No warranties of any kind are given by MSPL with respect to any Proprietary Information or any use thereof, and the Proprietary Information is provided on an &ldquo;AS IS&rdquo; basis. You shall hold all Proprietary Information in strict confidence and shall not disclose any Proprietary Information to any third party.
+                  |                 
+                  p
+                    | You shall not use any Proprietary Information for the benefit of yourself or any third party or for any purpose other than completion of the MSPL Content Management and Sharing Process. &nbsp;The obligations in this Paragraph 1 shall survive and continue into perpetuity.
+                  |                 
+                  p
+                    | You agree that, due to the unique nature of the Proprietary Information, the unauthorized disclosure or use of the Proprietary Information shall cause irreparable harm and significant injury to MSPL. Therefore, you agree that MSPL, in addition to any other available remedies, shall have the right to an immediate injunction and other equitable relief enjoining any breach or threatened breach of this Agreement, without the necessity of posting any bond or other security and MSPL at its discretion may bring suitable proceedings in courts situated in New Delhi.
+                  |                 
+                  ol(start='2')
+                    li
+                      | Miscellaneous. This Agreement constitutes the entire agreement between the parties concerning the subject matter. No amendment, cancellation, modification, or waiver of any provision of this Agreement shall be effective.
+                  |                 
+                  p
+                    | The waiver by either party of a default under any provision of this Agreement shall not be construed as a waiver of any subsequent default under the same or any other provision, nor shall any delay or omission on the part of either party to exercise or avail itself of any right or remedy that it has or may have hereunder operate as a waiver of any right or remedy. This Agreement shall be governed by and construed in accordance with the laws of India.
+                  |                 
+                  p
+                    | This Agreement and the rights and obligations hereunder may not be assigned or delegated by either party, in whole or part, whether voluntarily, by operation of law, change of control or otherwise, without the prior written consent of the other party.
+                  |                 
+                  p
+                    | Subject to the foregoing, this Agreement shall be binding upon and inure to the benefit of the parties and their respective successors and permitted assigns. The parties are independent contractors, and neither party shall have any authority of any kind to bind the other party in any respect whatsoever.
+                  |                 
+                  p
+                    | BY CLICKING ON THE &ldquo;I ACCEPT&rdquo; BUTTON BELOW, YOU ACKNOWLEDGE THAT (1) YOU HAVE READ AND REVIEWED THIS AGREEMENT IN ITS ENTIRETY, (2) YOU AGREE TO BE BOUND BY THIS AGREEMENT, (3) THE INDIVIDUAL SO CLICKING HAS THE POWER, AUTHORITY AND LEGAL RIGHT TO ENTER INTO THIS AGREEMENT ON BEHALF OF YOU AND, AND (4) BY SO CLICKING, THIS AGREEMENT CONSTITUTES BINDING AND ENFORCEABLE OBLIGATIONS OF YOU.
+
+        .login-buttons
+          button.btn.btn-success.btn-block.btn-lg(type='submit') Sign me in
+        .m-t-20.m-b-40.p-b-40
+          | Not a member yet? Click 
+          a.text-success(ui-sref='/register') here
+          |  to register.
+          br
+          | Forgot your password ? Click 
+          a.text-success(ui-sref='/register') here
+          |  to reset the password.
+        hr
+        p.text-center.text-inverse
+          | © Vuliv Player All Right Reserved 2017
+    // end login-content
+  // end right-container
+// end login</body></html>
+script.
+  $(document).ready(function() {
+    $("#accept").prop("disabled", true);
+    });

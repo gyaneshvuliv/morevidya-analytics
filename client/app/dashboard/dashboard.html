@@ -1,0 +1,446 @@
+<div ng-controller="dashboardController">
+    <!-- begin breadcrumb -->
+    <ol class="breadcrumb pull-right">
+        <li><a href="javascript:;">Home</a></li>
+        <li><a href="javascript:;">Dashboard</a></li>
+        <!-- <li class="active">Dashboard v2</li> -->
+    </ol>
+    <!-- end breadcrumb -->
+    <!-- begin page-header -->
+    <h1 class="page-header">Dashboard <small>header small text goes here...</small></h1>
+    <!-- end page-header -->
+    <!-- begin row -->
+    <div class="row" ng-if="role == 'admin' || role == 'user'">
+        <!-- begin col-3 -->
+
+<!-- server today/yes -->
+
+        <div class="col-md-3 col-sm-6">
+            <div id="01" class="widget widget-stats bg-green">
+                <div class="stats-icon stats-icon-lg"><i class="fa fa-user fa-fw"></i></div>
+                <div class="stats-title"> Server </div>
+                <div style="font-size: 16px;" class="stats-number">T - {{today_server}}/ Y - {{y_server}} </div>
+                <!-- <div class="stats-desc">IOS {{IOSversion}} : {{Lversion | number}}</div> -->
+                <div class="stats-progress progress">
+                    <div class="progress-bar" style="width: 70.1%;"></div>
+                </div>
+                <div class="stats-desc">TOTAL - {{total_server}} </div>
+            </div>
+        </div>
+          <!-- end col-3 -->
+        <!-- begin col-3 -->
+<!--wifi login -->
+
+        <div class="col-md-3 col-sm-6">
+            <div id="01" class="widget widget-stats bg-purple">
+                <div class="stats-icon stats-icon-lg"><i class="fa fa-clock-o fa-fw"></i></div>
+                <div class="stats-title">WIFI Login</div>
+                <div style="font-size: 16px;" class="stats-number">T- {{today_wifi_login}}/Y -{{y_wifi_login}} | Avg-{{avgUser}} </div>
+                <!-- <div class="stats-desc">IOS {{IOSversion}} - {{Lversion | number}}</div> -->
+                <div class="stats-progress progress">
+                    <div class="progress-bar" style="width: 70.1%;"></div>
+                </div>
+                <div class="stats-desc">TOTAL - {{total_wifi_login}} </div>
+            
+            </div>
+        </div>
+
+ <!-- Dau today/yes -->
+
+        <div class="col-md-3 col-sm-6">
+            <div id="01" class="widget widget-stats bg-black">
+                <div class="stats-icon stats-icon-lg"><i class="fa fa-user fa-fw"></i></div>
+                <div class="stats-title">DAU</div>
+                <div style="font-size: 16px;" class="stats-number">T/Y - {{today_dau}}/{{yesterday_dau}} </div>
+                <!-- <div class="stats-desc">IOS {{IOSversion}} - {{Lversion | number}}</div> -->
+                <div class="stats-progress progress">
+                    <div class="progress-bar" style="width: 70.1%;"></div>
+                </div>
+                <div class="stats-desc">C/P MAU - {{month_mau}}/{{premonth_mau}}</div> 
+                <!-- T/Y User - {{today_user}}/{{yesterday_user}}</div> -->
+            </div>
+        </div>
+        <!-- end col-3 -->
+        <!-- begin col-3 -->
+ 
+<!-- Total clicks today/yes  -->
+
+        <div class="col-md-3 col-sm-6">
+            <div id="01" class="widget widget-stats bg-aqua">
+                <div class="stats-icon stats-icon-lg"><i class="fa fa-play fa-fw"></i></div>
+                <div class="stats-title">Total Click </div>
+                <div style="font-size: 16px;" class="stats-number">T - {{today_played}}/ Y - {{y_played}} </div>
+                <!-- <div class="stats-desc">IOS {{IOSversion}} - {{Lversion | number}}</div> -->
+                <div class="stats-progress progress">
+                    <div class="progress-bar" style="width: 70.1%;"></div>
+                </div>
+                <div class="stats-desc">TOTAL - {{total_played}} </div>
+            </div>
+        </div>
+        <!-- end col-3 -->
+        <!-- begin col-3 -->
+
+<!-- Platform Time Spend(H)  -->
+
+        <div class="col-md-3 col-sm-6">
+            <div id="01" class="widget widget-stats bg-green">
+                <div class="stats-icon stats-icon-lg"><i class="fa fa-clock-o fa-fw"></i></div>
+                <div class="stats-title">Platform Time Spend(H)</div>
+                <div style="font-size: 16px;" class="stats-number">T - {{today_durations}}/ Y - {{y_durations}} </div>
+                <!-- <div class="stats-desc">IOS {{IOSversion}} - {{Lversion | number}}</div> -->
+                <div class="stats-progress progress">
+                    <div class="progress-bar" style="width: 70.1%;"></div>
+                </div>
+                <div class="stats-desc">&nbsp </div>
+               
+            </div>
+        </div>
+      
+        <!-- end col-3 -->
+        <!-- begin col-3 -->
+
+    <!-- Total Click Per User -->
+
+    <div class="col-md-3 col-sm-6">
+        <div id="01" class="widget widget-stats bg-purple">
+            <div class="stats-icon stats-icon-lg"><i class="fa fa-user fa-fw"></i></div>
+            <div class="stats-title">Total Click Per User</div>
+            <div style="font-size: 16px;" class="stats-number">T - {{t_cpu}}/ Y - {{y_cpu}} </div>
+            <!-- <div class="stats-desc">IOS {{IOSversion}} : {{Lversion | number}}</div> -->
+            <div class="stats-progress progress">
+                <div class="progress-bar" style="width: 70.1%;"></div>
+            </div>
+            <div class="stats-desc">TOTAL Average Click - {{total_cpu}} </div>
+        </div>
+    </div>
+    <!-- end col-3 -->
+        <!-- begin col-3 -->
+        <!-- Video Played Per User -->
+
+        <div class="col-md-3 col-sm-6">
+            <div id="01" class="widget widget-stats bg-black">
+                <div class="stats-icon stats-icon-lg"><i class="fa fa-user fa-fw"></i></div>
+                <div class="stats-title">Video Played Per User</div>
+                <div style="font-size: 16px;" class="stats-number">T - {{t_fpu}}/ Y - {{y_fpu}} </div>
+                <!-- <div class="stats-desc">IOS {{IOSversion}} : {{Lversion | number}}</div> -->
+                <div class="stats-progress progress">
+                    <div class="progress-bar" style="width: 70.1%;"></div>
+                </div>
+                <div class="stats-desc">TOTAL Average Video Played - {{total_fpu}} </div>
+            </div>
+        </div>
+        <!-- end col-3 -->
+        <!-- begin col-3 -->
+
+             <!-- Game Played Per User -->
+
+        <div class="col-md-3 col-sm-6">
+            <div id="01" class="widget widget-stats bg-aqua">
+                <div class="stats-icon stats-icon-lg"><i class="fa fa-user fa-fw"></i></div>
+                <div class="stats-title">Game Played Per User </div>
+                <div style="font-size: 16px;" class="stats-number">T - {{t_gpu}}/ Y - {{y_gpu}} </div>
+                <!-- <div class="stats-desc">IOS {{IOSversion}} - {{Lversion | number}}</div> -->
+                <div class="stats-progress progress">
+                    <div class="progress-bar" style="width: 70.1%;"></div>
+                </div>
+                <div class="stats-desc">TOTAL Average Game Played - {{total_gpu}} </div>
+            </div>
+        </div>
+        <!-- end col-3 -->
+        <!-- begin col-3 -->
+
+<!-- end col-3 -->
+        <!-- begin col-3 -->
+        <!-- Fnb Click Per User -->
+ 
+        <div class="col-md-3 col-sm-6">
+            <div id="01" class="widget widget-stats bg-green">
+                <div class="stats-icon stats-icon-lg"><i class="fa fa-user fa-fw"></i></div>
+                <div class="stats-title">FnB clicks Per User</div>
+                <div style="font-size: 16px;" class="stats-number">T - {{t_fnbcpu}}/ Y - {{y_fnbcpu}} </div>
+                <!-- <div class="stats-desc">IOS {{IOSversion}} : {{Lversion | number}}</div> -->
+                <div class="stats-progress progress">
+                    <div class="progress-bar" style="width: 70.1%;"></div>
+                </div>
+                <div class="stats-desc">TOTAL Average FnB Clicks - {{total_fnbcpu}} </div>
+            </div>
+        </div>
+<!-- end col-3 -->
+        <!-- begin col-3 -->
+        <!-- Audio CLick Per User -->
+
+        <div class="col-md-3 col-sm-6">
+            <div id="01" class="widget widget-stats bg-purple">
+                <div class="stats-icon stats-icon-lg"><i class="fa fa-user fa-fw"></i></div>
+                <div class="stats-title">Audio Clicks Per User</div>
+                <div style="font-size: 16px;" class="stats-number">T - {{t_acpu}}/ Y - {{y_acpu}} </div>
+                <!-- <div class="stats-desc">IOS {{IOSversion}} : {{Lversion | number}}</div> -->
+                <div class="stats-progress progress">
+                    <div class="progress-bar" style="width: 70.1%;"></div>
+                </div>
+                <div class="stats-desc">TOTAL Average Audio Clicks - {{total_acpu}} </div>
+            </div>
+        </div>
+        <!-- end col-3 -->
+        <!-- begin col-3 -->
+        <!--Magzine click Per User -->
+
+        <div class="col-md-3 col-sm-6">
+            <div id="01" class="widget widget-stats bg-black">
+                <div class="stats-icon stats-icon-lg"><i class="fa fa-user fa-fw"></i></div>
+                <div class="stats-title">Magazine Clicks Per User</div>
+                <div style="font-size: 16px;" class="stats-number">T - {{t_pdfpu}}/ Y - {{y_pdfpu}} </div>
+                <!-- <div class="stats-desc">IOS {{IOSversion}} : {{Lversion | number}}</div> -->
+                <div class="stats-progress progress">
+                    <div class="progress-bar" style="width: 70.1%;"></div>
+                </div>
+                <div class="stats-desc">TOTAL Average Magazine Click - {{total_pdfpu}} </div>
+            </div>
+        </div>
+
+
+        <!-- end col-3 -->
+        <!-- begin col-3 -->
+    <!--watch login -->
+        <!-- <div class="col-md-3 col-sm-6"> -->
+            <!-- <div id="01" class="widget widget-stats bg-black"> -->
+                <!-- <div class="stats-icon stats-icon-lg"><i class="fa fa-user fa-fw"></i></div> -->
+                <!-- <div class="stats-title">Watch Login</div> -->
+                <!-- <div style="font-size: 16px;" class="stats-number">T - {{today_login}}/ Y - {{y_login}} </div> -->
+                <!-- <div class="stats-desc">IOS {{IOSversion}} - {{Lversion | number}}</div> -->
+                <!-- <div class="stats-progress progress"> -->
+                    <!-- <div class="progress-bar" style="width: 70.1%;"></div> -->
+                <!-- </div> -->
+                <!-- <div class="stats-desc">TOTAL - {{total_login}} </div> -->
+                <!-- T/Y User - {{today_user}}/{{yesterday_user}}</div> -->
+            <!-- </div>  -->
+        <!-- </div> -->
+        <!-- end col-3 -->
+    </div>
+    <!-- end row -->
+    <!-- start row -->
+    <div ng-if="role == 'admin' || role == 'user'">
+        <div class="panel panel-inverse panel-with-tabs" data-sortable-id="ui-unlimited-tabs-1">
+            <div class="panel-heading p-0">
+                <div class="panel-heading-btn m-r-10 m-t-10">
+                    <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                </div>
+                <div class="tab-overflow">
+                    <ul class="nav nav-tabs nav-tabs-inverse">
+                        <li class="prev-button"><a href="javascript:;" data-click="prev-tab" class="text-success"><i class="fa fa-arrow-left"></i></a></li>
+                        <li class="active"><a href="#" data-target="#nav-tab-1" data-toggle="tab">Server Client Connection Day Wise</a></li>
+                        <!-- <li class=""><a href="#" data-target="#nav-tab-2" data-toggle="tab">Server Client Connection Hour Wise</a></li> -->
+                        <li class=""><a href="#" data-target="#nav-tab-3" data-toggle="tab">File Played/Duration Hour Wise</a></li>
+                        <li class=""><a href="#" data-target="#nav-tab-4" data-toggle="tab">Top Aircraft</a></li>
+                        <li class=""><a href="#" data-target="#nav-tab-5" data-toggle="tab">Top Genre</a></li>
+                        <li class="next-button"><a href="javascript:;" data-click="next-tab" class="text-success"><i class="fa fa-arrow-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab-content">
+                <div class="tab-pane fade active in" id="nav-tab-1">
+                    <div class="row" ng-include src="'app/vuScreen/views/serverclientdaywise.html'"></div>
+                </div>
+                <!-- <div class="tab-pane fade" id="nav-tab-2">
+                    <div class="row" ng-include src="'app/vuScreen/views/serverclienthourwise.html'"></div>
+                </div> -->
+                <div class="tab-pane fade" id="nav-tab-3">
+                    <div class="row" ng-include src="'app/vuScreen/views/fileplaysharehourwise.html'"></div>
+                </div>
+                <div class="tab-pane fade" id="nav-tab-4">
+                    <div class="row" ng-include src="'app/vuScreen/views/busSummary.html'"></div>
+                </div>
+                <div class="tab-pane fade" id="nav-tab-5">
+                    <div class="row" ng-include src="'app/vuScreen/views/genreSummary.html'"></div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <!-- end row -->
+    <!-- begin row -->
+    <div class="row" ng-if="role == 'vuscreenvuprime'">
+        <!-- begin col-3 -->
+        <h6><b>Vuscreen</b></h6>
+        <div class="col-md-3 col-sm-6">
+            <div id="01" class="widget widget-stats bg-green">
+                <div class="stats-icon stats-icon-lg"><i class="fa fa-user fa-fw"></i></div>
+                <div class="stats-title">Server/Client </div>
+                <div style="font-size: 16px;" class="stats-number">TODAY'S - {{today_server}}/{{today_client}} </div>
+                <div class="stats-progress progress">
+                    <div class="progress-bar" style="width: 70.1%;"></div>
+                </div>
+                <div class="stats-desc">TOTAL - {{total_server}}/{{total_client}} </div>
+            </div>
+        </div>
+        <!-- end col-3 -->
+        <!-- begin col-3 -->
+        <div class="col-md-3 col-sm-6">
+            <div id="01" class="widget widget-stats bg-aqua">
+                <div class="stats-icon stats-icon-lg"><i class="fa fa-play fa-fw"></i></div>
+                <div class="stats-title">File Played </div>
+                <div style="font-size: 16px;" class="stats-number">TODAY'S - {{today_played}} </div>
+                <div class="stats-progress progress">
+                    <div class="progress-bar" style="width: 70.1%;"></div>
+                </div>
+                <div class="stats-desc">TOTAL - {{total_played}} </div>
+            </div>
+        </div>
+        <!-- end col-3 -->
+        <!-- begin col-3 -->
+        <div class="col-md-3 col-sm-6">
+            <div id="01" class="widget widget-stats bg-purple">
+                <div class="stats-icon stats-icon-lg"><i class="fa fa-clock-o fa-fw"></i></div>
+                <div class="stats-title">File Played Duration(M)</div>
+                <div style="font-size: 16px;" class="stats-number">TODAY'S - {{today_duration | number : 2}} </div>
+                <div class="stats-progress progress">
+                    <div class="progress-bar" style="width: 70.1%;"></div>
+                </div>
+                <div class="stats-desc">TOTAL - {{total_duration | number : 2}} </div>
+            </div>
+        </div>
+        <!-- end col-3 -->
+        <!-- begin col-3 -->
+        <div class="col-md-3 col-sm-6">
+            <div id="01" class="widget widget-stats bg-black">
+                <div class="stats-icon stats-icon-lg"><i class="fa fa-user fa-fw"></i></div>
+                <div class="stats-title">DAU</div>
+                <div style="font-size: 16px;" class="stats-number">T/Y - {{today_dau}}/{{yesterday_dau}} </div>
+                <div class="stats-progress progress">
+                    <div class="progress-bar" style="width: 70.1%;"></div>
+                </div>
+                <div class="stats-desc">C/P MAU - {{month_mau}}/{{premonth_mau}}</div> 
+            </div>
+        </div>
+        <!-- end col-3 -->
+        <!-- begin col-3 -->
+        <h6><b>VuPrime</b></h6>
+        <div class="col-md-3 col-sm-6">
+            <div id="01" class="widget widget-stats bg-green">
+                <div class="stats-icon stats-icon-lg"><i class="fa fa-user fa-fw"></i></div>
+                <div class="stats-title">Server/Client </div>
+                <div style="font-size: 16px;" class="stats-number">TODAY'S - {{vp_today_server}}/{{vp_today_client}} </div>
+                <div class="stats-progress progress">
+                    <div class="progress-bar" style="width: 70.1%;"></div>
+                </div>
+                <div class="stats-desc">TOTAL - {{vp_total_server}}/{{vp_total_client}} </div>
+            </div>
+        </div>
+        <!-- end col-3 -->
+        <!-- begin col-3 -->
+        <div class="col-md-3 col-sm-6">
+            <div id="01" class="widget widget-stats bg-aqua">
+                <div class="stats-icon stats-icon-lg"><i class="fa fa-play fa-fw"></i></div>
+                <div class="stats-title">File Played </div>
+                <div style="font-size: 16px;" class="stats-number">TODAY'S - {{vp_today_played}} </div>
+                <div class="stats-progress progress">
+                    <div class="progress-bar" style="width: 70.1%;"></div>
+                </div>
+                <div class="stats-desc">TOTAL - {{vp_total_played}} </div>
+            </div>
+        </div>
+        <!-- end col-3 -->
+        <!-- begin col-3 -->
+        <div class="col-md-3 col-sm-6">
+            <div id="01" class="widget widget-stats bg-purple">
+                <div class="stats-icon stats-icon-lg"><i class="fa fa-clock-o fa-fw"></i></div>
+                <div class="stats-title">File Played Duration(M)</div>
+                <div style="font-size: 16px;" class="stats-number">TODAY'S - {{vp_today_duration | number : 2}} </div>
+                <div class="stats-progress progress">
+                    <div class="progress-bar" style="width: 70.1%;"></div>
+                </div>
+                <div class="stats-desc">TOTAL - {{vp_total_duration | number : 2}} </div>
+            </div>
+        </div>
+        <!-- end col-3 -->
+        <!-- begin col-3 -->
+        <div class="col-md-3 col-sm-6">
+            <div id="01" class="widget widget-stats bg-black">
+                <div class="stats-icon stats-icon-lg"><i class="fa fa-user fa-fw"></i></div>
+                <div class="stats-title">DAU</div>
+                <div style="font-size: 16px;" class="stats-number">T/Y - {{vp_today_dau}}/{{vp_yesterday_dau}} </div>
+                <div class="stats-progress progress">
+                    <div class="progress-bar" style="width: 70.1%;"></div>
+                </div>
+                <div class="stats-desc">C/P MAU - {{vp_month_mau}}/{{vp_premonth_mau}}</div> 
+            </div>
+        </div>
+        <!-- end col-3 -->
+    </div>
+    <!-- end row -->
+    <!-- start row -->
+    <div ng-if="role == 'vuscreenvuprime'">
+        <h6><b>Vuscreen</b></h6>
+        <div class="panel panel-inverse panel-with-tabs" data-sortable-id="ui-unlimited-tabs-1">
+            <div class="panel-heading p-0">
+                <div class="panel-heading-btn m-r-10 m-t-10">
+                    <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                </div>
+                <div class="tab-overflow">
+                    <ul class="nav nav-tabs nav-tabs-inverse">
+                        <li class="prev-button"><a href="javascript:;" data-click="prev-tab" class="text-success"><i class="fa fa-arrow-left"></i></a></li>
+                        <!-- <li class="active"><a href="#" data-target="#nav-tab-1" data-toggle="tab">Server Client Connection Day Wise</a></li> -->
+                        <!-- <li class=""><a href="#" data-target="#nav-tab-2" data-toggle="tab">Server Client Connection Hour Wise</a></li> -->
+                        <li class="active"><a href="#" data-target="#nav-tab-3" data-toggle="tab">File Played/Duration Hour Wise</a></li>
+                        <li class=""><a href="#" data-target="#nav-tab-4" data-toggle="tab">Top Bus</a></li>
+                        <li class=""><a href="#" data-target="#nav-tab-5" data-toggle="tab">Top Genre</a></li>
+                        <li class="next-button"><a href="javascript:;" data-click="next-tab" class="text-success"><i class="fa fa-arrow-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab-content">
+                <!-- <div class="tab-pane fade active in" id="nav-tab-1">
+                    <div class="row" ng-include src="'app/vuScreen/views/serverclientdaywise.html'"></div>
+                </div>
+                <div class="tab-pane fade" id="nav-tab-2">
+                    <div class="row" ng-include src="'app/vuScreen/views/serverclienthourwise.html'"></div>
+                </div> -->
+                <div class="tab-pane fade active in" id="nav-tab-3">
+                    <div class="row" ng-include src="'app/vuScreen/views/fileplaysharehourwise.html'"></div>
+                </div>
+                <div class="tab-pane fade" id="nav-tab-4">
+                    <div class="row" ng-include src="'app/vuScreen/views/busSummary.html'"></div>
+                </div>
+                <div class="tab-pane fade" id="nav-tab-5">
+                    <div class="row" ng-include src="'app/vuScreen/views/genreSummary.html'"></div>
+                </div>
+            </div>
+        </div>
+        <h6><b>Vuprime</b></h6>
+        <div class="panel panel-inverse panel-with-tabs" data-sortable-id="ui-unlimited-tabs-1">
+            <div class="panel-heading p-0">
+                <div class="panel-heading-btn m-r-10 m-t-10">
+                    <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                </div>
+                <div class="tab-overflow">
+                    <ul class="nav nav-tabs nav-tabs-inverse">
+                        <li class="prev-button"><a href="javascript:;" data-click="prev-tab" class="text-success"><i class="fa fa-arrow-left"></i></a></li>
+                        <!-- <li class="active"><a href="#" data-target="#nav-tab-6" data-toggle="tab">Server Client Connection Day Wise</a></li> -->
+                        <!-- <li class=""><a href="#" data-target="#nav-tab-7" data-toggle="tab">Server Client Connection Hour Wise</a></li> -->
+                        <li class="active"><a href="#" data-target="#nav-tab-8" data-toggle="tab">File Played/Duration Hour Wise</a></li>
+                        <!-- <li class=""><a href="#" data-target="#nav-tab-9" data-toggle="tab">Top Bus</a></li> -->
+                        <!-- <li class=""><a href="#" data-target="#nav-tab-10" data-toggle="tab">Top Genre</a></li> -->
+                        <li class="next-button"><a href="javascript:;" data-click="next-tab" class="text-success"><i class="fa fa-arrow-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab-content">
+                <!-- <div class="tab-pane fade active in" id="nav-tab-6">
+                    <div class="row" ng-include src="'app/vuScreen/views/serverclientdaywise.html'"></div>
+                </div>
+                <div class="tab-pane fade" id="nav-tab-7">
+                    <div class="row" ng-include src="'app/vuScreen/views/serverclienthourwise.html'"></div>
+                </div> -->
+                <div class="tab-pane fade active in" id="nav-tab-8">
+                    <div class="row" ng-include src="'app/vuprime/views/fileplaysharehourwise.html'"></div>
+                </div>
+                <div class="tab-pane fade" id="nav-tab-9">
+                    <div class="row" ng-include src="'app/vuprime/views/busSummary.html'"></div>
+                </div>
+                <div class="tab-pane fade" id="nav-tab-10">
+                    <div class="row" ng-include src="'app/vuprime/views/genreSummary.html'"></div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <!-- end row -->
+</div>		

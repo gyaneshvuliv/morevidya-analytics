@@ -1,0 +1,94 @@
+// begin #sidebar
+#sidebar.sidebar(ng-controller='sidebarController', ng-class="{ 'sidebar-transparent': setting.layout.pageSidebarTransparent }")
+  // begin sidebar scrollbar
+  div(data-scrollbar='true', data-height='100%')
+    // begin sidebar user
+    ul.nav
+      li.nav-profile
+        .image
+          a(href='javascript:;')
+            img(src='assets/img/user-13.jpg', alt='')
+        .info
+          | #{user.name}
+          small TimeBomb
+    // end sidebar user
+    // begin sidebar nav
+    ul.nav
+      li.nav-header Navigation 
+      li.has-sub(ng-class="{active:$state.includes('app.dashboard')}")
+        a(href='javascript:;')
+          b.badge.pull-right
+          i.fa.fa-laptop
+          span Dashboard 
+        ul.sub-menu
+          li(ui-sref-active='active')
+            a(ui-sref='app.dashboard') Overview
+      // Push Notification menu start
+      li.has-sub(ng-class="{active:$state.includes('app.devices')}")
+        a(href='javascript:;')
+          span.caret.pull-right
+          i.fa.fa-mobile
+          span Devices
+        ul.sub-menu
+          li(ui-sref-active='active')
+            a(ui-sref='app.devices.analysis') Analysis
+          li(ui-sref-active='active')
+            a(ui-sref='app.devices.android') Android
+          li(ui-sref-active='active')
+            a(ui-sref='app.devices.ios') IOS
+      // begin sidebar minify button
+      // Push Notification menu start
+      li.has-sub(ng-class="{active:$state.includes('app.notifications')}")
+        a(href='javascript:;')
+          span.caret.pull-right
+          i.fa.fa-bell
+          span Notifications
+        ul.sub-menu
+          li(ui-sref-active='active')
+            a(ui-sref='app.notifications.android') Android
+          li(ui-sref-active='active')
+            a(ui-sref='app.notifications.ios') IOS
+      // begin sidebar minify button
+      // TimeBomb Notification menu start
+      li.has-sub(ng-class="{active:$state.includes('app.timebomb.notifications')}")
+        a(href='javascript:;')
+          span.caret.pull-right
+          i.fa.fa-bomb
+          span TimeBomb Notifications
+        ul.sub-menu
+          li(ui-sref-active='active')
+            a(ui-sref='app.timebombNotifications.android') Android
+          li(ui-sref-active='active')
+            a(ui-sref='app.timebombNotifications.ios') IOS
+      // begin sidebar minify button
+      li
+        a.sidebar-minify-btn(href='javascript:;', data-click='sidebar-minify')
+          i.fa.fa-angle-double-left
+      // end sidebar minify button
+    // end sidebar nav
+  div(data-scrollbar='true', data-height='100%', ng-if="access.role == 'user'")
+    // begin sidebar user
+    ul.nav
+      li.nav-profile
+        .image
+          a(href='javascript:;')
+            img(src='assets/img/user-13.jpg', alt='')
+        .info
+          | Admin
+          small Analytics
+    // end sidebar user
+    // begin sidebar nav
+    ul.nav
+      li.nav-header Navigation
+      li.has-sub(ng-class="{active:$state.includes('app.dashboard')}")
+        a(href='javascript:;')
+          b.badge.pull-right
+          i.fa.fa-laptop
+          span Dashboard
+        ul.sub-menu
+          li(ui-sref-active='active')
+            a(ui-sref='app.dashboard') Overview
+    // end sidebar nav
+  // end sidebar scrollbar
+.sidebar-bg
+// end #sidebar

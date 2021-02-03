@@ -1,0 +1,40 @@
+<div class="col-md-12" ng-controller="trackerLogsController">
+        <!-- begin panel -->
+        <div class="panel panel-inverse" data-sortable-id="index-2">
+            <div class="panel-heading">
+                <div class="panel-heading-btn">
+                    <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                    <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+                    <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                    <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+                </div>
+                <h4 class="panel-title" style="display: inline-block;">Real Time Play Data</h4>
+                <span class="label label-success pull-right">{{data_length}}</span>
+            </div>
+            <div class="panel-body bg-silver">
+                <div data-scrollbar="true" data-height="391px">
+                    <ul class="chats">
+                        <li class="left" data-ng-repeat="item in events">
+                            <span class="date-time">{{item.sync_datetime | date:'yyyy-MMM-dd hh:mm:ss:sss a'}}</span>
+                            <a href="javascript:;" class="name">{{item.title}} | {{item.genre}}</a>
+                            <a href="javascript:;" class="image"><img alt="" src="{{item.thumbnail}}" /></a>
+                            <div class="message">
+                            <div class="message">
+                                <b>Vehicle No : </b> {{item.vehicle_no}}
+                                <b>Source : </b> {{item.source}}
+                                <b>Destination : </b> {{item.destination}}
+                                <b>Duration(M) : </b> {{item.view_duration}}
+                                <b>Type : </b> {{item.type}}
+                                <b>Android Id : </b> {{item.view_android_id}}
+                                <b>View Model : </b> {{item.view_model}}
+                                <b>Interface : </b> {{item.interface}}
+                                <b>Version : </b> {{item.version}}
+                                <b>View Time : </b> {{item.view_datetime | date:'yyyy-MMM-dd hh:mm:ss:sss a' }}
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- end panel -->
+    </div>

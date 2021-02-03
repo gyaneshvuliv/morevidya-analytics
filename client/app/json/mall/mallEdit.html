@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #d9e0e7;
+        ;
+        /* background-image: url("bg.jpg"); */
+        /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/signup.jpeg'); */
+        /* background-repeat: no-repeat; */
+        /* background-size: cover; */
+        /* background-position: center center; */
+        /* background-fill-mode: rgba(0,0,0,0.5); */
+        /* display: flex; */
+        /* align-items: center; */
+        /* height: 100vh; */
+    }
+
+    * {
+        box-sizing: border-box
+    }
+
+    /* Full-width input fields */
+    input[type=text],
+    input[type=password],
+    input[type=number] {
+        width: 95%;
+        padding: 10px;
+        margin: 0px 0 1px 0;
+        display: flex;
+        border: none;
+        background: #f1f1f1;
+    }
+
+    select {
+        width: 98%;
+        /* padding: 10px; */
+        margin: 0px 0 1px 0;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+    }
+
+    /* Add a background color when the inputs get focus */
+    input[type=text]:focus,
+    input[type=password]:focus {
+        background-color: #ddd;
+        outline: none;
+    }
+
+    /* Set a style for all buttons */
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+    }
+
+    button:hover {
+        opacity: 1;
+    }
+
+
+    /* Add padding to container1 elements */
+    .container1 {
+        padding: 16px;
+    }
+
+    /* The Modal (background) */
+    .modal1 {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/signup.jpeg');
+        display: inline;
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        overflow: auto;
+        /* Enable scroll if needed */
+        /* background-color: #474e5d; */
+        padding-top: 10px;
+    }
+
+    /* Modal Content/Box */
+    .modal-content1 {
+        background-color: #fefefe;
+        margin: 5% 12% 5% auto;
+        /* 5% from the top, 15% from the bottom and centered */
+        border: 1px solid #888;
+        width: 60%;
+        /* Could be more or less, depending on screen size */
+    }
+
+    /* Style the horizontal ruler */
+    hr {
+        border: 1px solid #28bbb4;
+        margin-bottom: 10px;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #f44336;
+        cursor: pointer;
+    }
+
+    /* Clear floats */
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    /* Change styles for cancel button and signup button on extra small screens */
+    @media screen and (max-width: 300px) {
+
+        .cancelbtn,
+        .signupbtn {
+            width: 100%;
+        }
+    }
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+    }
+
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    input:checked+.slider {
+        background-color: #2196F3;
+    }
+
+    input:focus+.slider {
+        box-shadow: 0 0 1px #2196F3;
+    }
+
+    input:checked+.slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+
+    /* Rounded sliders */
+    .slider.round {
+        border-radius: 34px;
+    }
+
+    .slider.round:before {
+        border-radius: 50%;
+    }
+</style>
+
+<body>
+
+    <div class="modal1" ng-controller="editMallController">
+        <form class="modal-content1">
+            <div class="container1">
+                <h3 align='center'>Edit Mall</h3>
+                <p align='center'>Please fill in this form to save the content info.</p>
+                <hr>
+                <label for="content_id"><b>Content Id</b></label>
+                <input type="text" placeholder="Enter Content Id" ng-model="content_id" ng-value="data[0].content_id"
+                    name="content_id" required readonly>
+
+                <label for="title"><b>Title</b></label>
+                <input type="text" placeholder="Enter Title" ng-model="title" name="title" required>
+
+                <label style="margin-left: 1px;" for="description"><b>Description</b></label>
+                <input type="text" placeholder="Enter Description" ng-model="description" name="description" required>
+
+                <label style="margin-left: 1px;" for="folder_id"><b>Folder</b></label>
+                <input type="number" onKeyPress="if(this.value.length==4) return false;" placeholder="Enter Folder Id"
+                    ng-model="folder_id" name="folder_id" required>
+
+                <label style="margin-left: 1px;" for="type"><b>Type</b></label>
+                <input type="text" placeholder="Enter Type" ng-model="type" name="type">
+
+                <label for="position"><b>Position</b></label>
+                <input type="number" onKeyPress="if(this.value.length==4) return false;" placeholder="Enter Position"
+                    ng-model="position" name="position">
+
+                <label for="price"><b>Price</b></label>
+                <input type="text" onKeyPress="if(this.value.length==4) return false;" placeholder="Enter Price"
+                    ng-model="price" name="price">
+
+                <label for="coupon_code"><b>Coupon Code</b></label>
+                <input type="text" placeholder="Enter Coupon Code" ng-model="coupon_code" name="coupon_code">
+
+                <label for="coupon_code_percentage"><b>Coupon Code %</b></label>
+                <input type="text" placeholder="Enter Coupon Code %" ng-model="coupon_code_percentage" name="coupon_code_percentage">
+
+                <label for="coupon_card_url"><b>Coupon Url</b></label>
+                <input type="text" placeholder="Enter Coupon Url" ng-model="coupon_card_url" name="coupon_card_url">
+
+                <label for="ecom_link"><b>Ecom Url</b></label>
+                <input type="text" placeholder="Enter Ecom Url" ng-model="ecom_link" name="ecom_link">
+
+                <label for="start_time"><b>Start Time</b></label>
+                <input type="text" placeholder="Enter Start Time" ng-model="start_time" name="start_time" readonly>
+
+                <label for="end_time"><b>End Time</b></label>
+                <input type="text" placeholder="Enter End Time" ng-model="end_time" name="end_time">
+
+                <label for="platform"><b>Platform</b></label>
+                <input type="text" placeholder="Enter Platform" ng-model="platform" name="platform">
+
+                <br>
+                <div class="clearfix">
+                    <button type="submit" ng-click="save()" class="signupbtn">Save</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<style>
+body {
+font-family: Arial, Helvetica, sans-serif;
+	background: #d9e0e7;;
+    /* background-image: url("bg.jpg"); */
+    /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/signup.jpeg'); */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    /* background-position: center center; */
+    /* background-fill-mode: rgba(0,0,0,0.5); */
+    /* display: flex; */
+    /* align-items: center; */
+    /* height: 100vh; */
+}
+* {box-sizing: border-box}
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 95%;
+    padding: 10px;
+    margin: 0px 0 1px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+select {
+    width: 98%;
+    /* padding: 10px; */
+    margin: 0px 0 1px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+button:hover {
+    opacity:1;
+}
+
+
+/* Add padding to container1 elements */
+.container1 {
+    padding: 16px;
+}
+
+/* The Modal (background) */
+.modal1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/signup.jpeg');
+    display: inline;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    /* background-color: #474e5d; */
+    padding-top: 10px;
+}
+
+/* Modal Content/Box */
+.modal-content1 {
+    background-color: #fefefe;
+    margin: 5% 12% 5% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 60%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+    border: 1px solid #28bbb4;
+    margin-bottom: 10px;
+}
+
+.close:hover,
+.close:focus {
+    color: #f44336;
+    cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+}
+</style>
+<body>
+
+<div class="modal1" ng-controller="editRegController">
+  <form class="modal-content1">
+    <div class="container1">
+      <h3 align='center'>Edit User</h3>
+      <p align='center'>Please fill in this form to save the registration info.</p>
+      <hr>
+      <label for="partner"><b>Partner</b></label>
+      <input type="text" placeholder="Enter Device Id" ng-model="partner" ng-value="data[0].partner" name="partner" required readonly>
+
+      <label for="device_id"><b>Device Id</b></label>
+      <input type="text" placeholder="Enter Device Id" ng-model="device_id" name="device_id" required readonly>
+
+      <label style="margin-left: 1px;" for="model"><b>Model</b></label>
+      <input type="text" placeholder="Enter Model" ng-model="model" name="model" required readonly>
+
+      <label for="os_version"><b>OS Version</b></label>
+      <input type="text" placeholder="Enter OS" ng-model="os_version" name="os_version" required readonly>
+
+      <label for="sdcard_name"><b>SD Card Name</b></label>
+      <input type="text" placeholder="Enter SD Card Name" ng-model="sdcard_name" name="sdcard_name" required readonly>
+
+      <label for="sdcard_no"><b>SD Card No</b></label>
+      <input type="text" placeholder="Enter SD Card No" ng-model="sdcard_no" name="sdcard_no" required readonly>
+
+      <label for="vehicle_no"><b>Vehicle No</b></label>
+      <input type="text" placeholder="Enter Vehicle No" ng-model="vehicle_no" name="vehicle_no">
+      
+      <label for="source"><b>Source</b></label>
+      <input type="text" placeholder="Enter Source" ng-model="source" name="source">
+      
+      <label for="destination"><b>Destination</b></label>
+      <input type="text" placeholder="Enter Destination" ng-model="destination" name="destination">
+
+      <label for="owner_email"><b>Owner Email</b></label>
+      <input type="text" placeholder="Enter Owner Email" ng-model="owner_email" name="owner_email">
+
+      <label for="owner_name"><b>Owner Name</b></label>
+      <input type="text" placeholder="Enter Owner Name" ng-model="owner_name" name="owner_name">
+
+      <label for="owner_no"><b>Owner No</b></label>
+      <input type="text" placeholder="Enter Owner No" ng-model="owner_no" name="owner_no">
+
+      <label for="driver_name"><b>Driver Name</b></label>
+      <input type="text" placeholder="Enter Driver Name" ng-model="driver_name" name="driver_name">
+
+      <label for="driver_no"><b>Driver No</b></label>
+      <input type="text" placeholder="Enter Driver No" ng-model="driver_no" name="driver_no">
+
+      <label for="helper_name"><b>Helper Name</b></label>
+      <input type="text" placeholder="Enter Helper Name" ng-model="helper_name" name="helper_name">
+
+      <label for="helper_no"><b>Helper No</b></label>
+      <input type="text" placeholder="Enter Helper No" ng-model="helper_no" name="helper_no">
+
+      <label for="location"><b>Location</b></label>
+      <input type="text" placeholder="Enter Location" ng-model="location" name="location">
+      
+      <div class="clearfix">
+        <button type="submit" ng-click="save()"  class="signupbtn">Save</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+</body>
+</html>

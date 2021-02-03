@@ -1,0 +1,98 @@
+<!-- begin register --> 
+<div class="register register-with-news-feed" ng-controller="signupController">
+    <!-- begin news-feed -->
+    <div class="news-feed">
+        <div class="news-image">
+            <img src="assets/images/bg-1.jpg" alt="" />
+        </div>
+        <div class="news-caption">
+            <h4 class="caption-title"><i class="fa fa-edit text-success"></i>VuScreen app</h4>
+            <p>
+                ..
+            </p>
+        </div>
+    </div>
+    <!-- end news-feed -->
+    <!-- begin right-content -->
+    <div class="right-content">
+        <!-- begin register-header -->
+        <h1 class="register-header">
+            Sign Up
+            <small>Know more about VuScreen, create your VuScreen Account.</small>
+        </h1>
+        <!-- end register-header -->
+        <!-- begin register-content -->
+        <div class="register-content">
+            <form class="form-horizontal margin-bottom-0"  method="POST"  name="validationForm" ng-submit="register(validationForm)" novalidate>
+                <!-- <label class="control-label">Name</label> -->
+                <!-- <span class="text-danger">*</span> -->
+                <div class="row row-space-10">
+                    <div class="col-md-6 m-b-15">
+                        <input type="text" class="form-control ng-pristine ng-invalid ng-invalid-required ng-touched" ng-model='user.fname' placeholder="First name" name='fname' required />
+                    </div>
+                    <div class="col-md-6 m-b-15">
+                        <input type="text" class="form-control ng-pristine ng-invalid ng-invalid-required ng-touched" ng-model='user.lname' placeholder="Last name" name='lname' required />
+                        
+                    </div>
+                </div>
+                <!-- <label class="control-label">Phone No</label> -->
+                <!-- <span class="text-danger">*</span> -->
+                <div class="row m-b-15">
+                    <div class="col-md-12">
+                        <input type="text" class="form-control ng-pristine ng-invalid ng-invalid-required ng-touched" name='mobileNo', ng-model='user.mobileNo' placeholder="Enter Your Mobile Number" required />
+                    </div>
+                </div>
+                <!-- <label class="control-label">Company Name</label> -->
+                <!-- <span class="text-danger">*</span> -->
+                <div class="row m-b-15">
+                    <div class="col-md-12">
+                        <input type="text" class="form-control ng-pristine ng-invalid ng-invalid-required ng-touched" name='companyName', ng-model='user.companyName' placeholder="Enter Your Company Name" required />
+                        
+                    </div>
+                </div>
+
+                <!-- <label class="control-label">Email</label> -->
+                <!-- <span class="text-danger">*</span> -->
+                <div class="row m-b-15">
+                    <div class="col-md-12">
+                        <input type="text" class="form-control ng-pristine ng-invalid ng-invalid-required ng-touched" name='email', ng-model='user.email' placeholder="Email address" required />
+                        
+                    </div>
+                </div>
+              <!-- <label class="control-label">Re-enter Email</label> -->
+              <div class="row m-b-15">
+                <div class="col-md-12">
+                    <input type="text" class="form-control" ng-model='user.reEmail'placeholder="Re-enter email address" />
+                </div>
+            </div>
+            <!-- <label class="control-label">Password</label> -->
+            <!-- <span class="text-danger">*</span> -->
+            <div class="row m-b-15">
+                <div class="col-md-12">
+                    <input name='password', type="password" class="form-control" , ng-model='user.password' placeholder="Password" required />
+                    
+                </div>
+            </div>
+
+            <div class="checkbox m-b-30">
+                <label>
+                    <input type="checkbox" checked /> By clicking Sign Up, you agree to our <a href="#">Terms</a> and that you have read our <a href="#">Data Policy</a>, including our <a href="#">Cookie Use</a>.
+                </label>
+            </div>
+            <div class="register-buttons">
+                <button type="submit" class="btn btn-primary btn-block btn-lg">Sign Up</button>
+            </div>
+            <div class="m-t-20 m-b-40 p-b-40">
+                Already a member? Click <a ui-sref="/login">here</a> to login.
+            </div>
+            <hr />
+            <p class="text-center text-inverse">
+                &copy; Mobi Sign Pvt. Ltd. All Right Reserved 2020
+            </p>
+        </form>
+    </div>
+    <!-- end register-content -->
+</div>
+<!-- end right-content -->
+</div>
+<!-- end register

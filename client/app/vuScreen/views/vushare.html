@@ -1,0 +1,131 @@
+<div ng-controller="VuShareController">
+    <!-- begin breadcrumb -->
+    <ol class="breadcrumb pull-right">
+        <!-- <li>
+            <select ng-change="changeInterface()" class="btn btn-default dropdown-toggle" ng-init="selectedInterface=interface[0]" ng-model="selectedInterface" ng-options="x.name for x in interface"></select>
+         </li> -->
+        <li><a href="javascript:;">Home</a></li>
+        <li><a href="javascript:;">VuShare</a></li>
+        <!-- <li class="active">VuShare v2</li> -->
+    </ol>
+    <!-- end breadcrumb -->
+    <!-- begin page-header -->
+    <h1 class="page-header">VuShare <small>Analytics...</small></h1>
+    <!-- end page-header -->
+    <!-- begin row -->
+    <div class="row">
+        <!-- begin col-3 (M-{{male}}, F-{{female}}) -->
+        <div class="col-md-3 col-sm-6">
+            <div id="01" class="widget widget-stats bg-green">
+                <div class="stats-icon stats-icon-lg"><i class="fa fa-user fa-fw"></i></div>
+                <div class="stats-title">Server/Client </div>
+                <div style="font-size: 16px;" class="stats-number">TODAY'S {{today_server}}/{{today_client}} </div>
+                <!-- <div class="stats-desc">IOS {{IOSversion}} : {{Lversion | number}}</div> -->
+                <div class="stats-progress progress">
+                    <div class="progress-bar" style="width: 70.1%;"></div>
+                </div>
+                <div class="stats-desc">TOTAL : {{total_server}}/{{total_client}} </div>
+            </div>
+        </div>
+        <!-- end col-3 -->
+        <!-- begin col-3 -->
+        <div class="col-md-3 col-sm-6">
+            <div id="01" class="widget widget-stats bg-blue">
+                <div class="stats-icon stats-icon-lg"><i class="fa fa-share-alt fa-fw"></i></div>
+                <div class="stats-title">Total File Shared</div>
+                <div style="font-size: 16px;" class="stats-number">TOTAL {{total_shared}} </div>
+                <!-- <div class="stats-desc">IOS {{IOSversion}} : {{Lversion | number}}</div> -->
+                <div class="stats-progress progress">
+                    <div class="progress-bar" style="width: 70.1%;"></div>
+                </div>
+                <div class="stats-desc">M : {{total_music}}, P : {{total_photo}}, V : {{total_video}} </div>
+            </div>
+        </div>
+        <!-- end col-3 -->
+        <!-- begin col-3 -->
+        <div class="col-md-3 col-sm-6">
+            <div id="01" class="widget widget-stats bg-purple">
+                <div class="stats-icon stats-icon-lg"><i class="fa fa-share-alt fa-fw"></i></div>
+                <div class="stats-title">Today's File Shared</div>
+                <div style="font-size: 16px;" class="stats-number">Today's {{todays_shared}} </div>
+                <!-- <div class="stats-desc">IOS {{IOSversion}} : {{Lversion | number}}</div> -->
+                <div class="stats-progress progress">
+                    <div class="progress-bar" style="width: 70.1%;"></div>
+                </div>
+                <div class="stats-desc">M : {{todays_music}}, P : {{todays_photo}}, V : {{todays_video}} </div>
+            </div>
+        </div>
+        <!-- end col-3 -->
+        <!-- begin col-3 -->
+        <div class="col-md-3 col-sm-6">
+            <div id="01" class="widget widget-stats bg-black">
+                <div class="stats-icon stats-icon-lg"><i class="fa fa-download fa-fw"></i></div>
+                <div class="stats-title">Total Download</div>
+                <div style="font-size: 16px;" class="stats-number">TOTAL {{total_download}} </div>
+                <!-- <div class="stats-desc">IOS {{IOSversion}} : {{Lversion | number}}</div> -->
+                <div class="stats-progress progress">
+                    <div class="progress-bar" style="width: 70.1%;"></div>
+                </div>
+                <div class="stats-desc">M : {{total_downloadmusic}}, P : {{total_downloadphoto}}, V : {{total_downloadvideo}} </div>
+            </div>
+        </div>
+        <!-- end col-3 -->
+        <!-- begin col-3 -->
+        <div class="col-md-3 col-sm-6">
+            <div id="01" class="widget widget-stats bg-green">
+                <div class="stats-icon stats-icon-lg"><i class="fa fa-play fa-fw"></i></div>
+                <div class="stats-title">Total File Played</div>
+                <div style="font-size: 16px;" class="stats-number">TOTAL {{total_played}} </div>
+                <!-- <div class="stats-desc">IOS {{IOSversion}} : {{Lversion | number}}</div> -->
+                <div class="stats-progress progress">
+                    <div class="progress-bar" style="width: 70.1%;"></div>
+                </div>
+                <div class="stats-desc">M : {{total_playedmusic}}, P : {{total_playedphoto}}, V : {{total_playedvideo}} </div>
+            </div>
+        </div>
+        <!-- end col-3 -->
+        <!-- begin col-3 -->
+        <div class="col-md-3 col-sm-6">
+            <div id="01" class="widget widget-stats bg-blue">
+                <div class="stats-icon stats-icon-lg"><i class="fa fa-play fa-fw"></i></div>
+                <div class="stats-title">Today's File Played</div>
+                <div style="font-size: 16px;" class="stats-number">Today's {{todays_played}} </div>
+                <!-- <div class="stats-desc">IOS {{IOSversion}} : {{Lversion | number}}</div> -->
+                <div class="stats-progress progress">
+                    <div class="progress-bar" style="width: 70.1%;"></div>
+                </div>
+                <div class="stats-desc">M : {{todays_playedmusic}}, P : {{todays_playedphoto}}, V : {{todays_playedvideo}} </div>
+            </div>
+        </div>
+        <!-- end col-3 -->
+        <!-- begin col-3 -->
+        <div class="col-md-3 col-sm-6">
+            <div id="01" class="widget widget-stats bg-purple">
+                <div class="stats-icon stats-icon-lg"><i class="fa fa-clock-o fa-fw"></i></div>
+                <div class="stats-title">Total Played Duration(hrs)</div>
+                <div style="font-size: 16px;" class="stats-number">TOTAL {{total_duration| number:2}} </div>
+                <!-- <div class="stats-desc">IOS {{IOSversion}} : {{Lversion | number}}</div> -->
+                <div class="stats-progress progress">
+                    <div class="progress-bar" style="width: 70.1%;"></div>
+                </div>
+                <div class="stats-desc">M : {{total_durationmusic| number:2}}, P : {{total_durationphoto| number:2}}, V : {{total_durationvideo| number:2}} </div>
+            </div>
+        </div>
+        <!-- end col-3 -->
+        <!-- begin col-3 -->
+        <div class="col-md-3 col-sm-6">
+            <div id="01" class="widget widget-stats bg-black">
+                <div class="stats-icon stats-icon-lg"><i class="fa fa-clock-o fa-fw"></i></div>
+                <div class="stats-title">Today's Played Duration(hrs)</div>
+                <div style="font-size: 16px;" class="stats-number">Today's {{todays_duration| number:2}} </div>
+                <!-- <div class="stats-desc">IOS {{IOSversion}} : {{Lversion | number}}</div> -->
+                <div class="stats-progress progress">
+                    <div class="progress-bar" style="width: 70.1%;"></div>
+                </div>
+                <div class="stats-desc">M : {{todays_durationmusic| number:2}}, P : {{todays_durationphoto| number:2}}, V : {{todays_durationvideo| number:2}} </div>
+            </div>
+        </div>
+        <!-- end col-3 -->
+    </div>
+    <!-- end row -->
+     

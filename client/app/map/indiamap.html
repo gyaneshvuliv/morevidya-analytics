@@ -1,0 +1,33 @@
+<div ng-controller="MapController">
+    <!-- begin breadcrumb -->
+    <ol class="breadcrumb pull-right">
+        <li><a href="javascript:;">Home</a></li>
+        <li><a href="javascript:;">Map</a></li>
+        <li class="active"></li>
+    </ol>
+    <!-- end breadcrumb -->
+    <!-- begin page-header -->
+    <h1 class="page-header"> <small>...</small></h1>
+    <!-- end page-header -->
+    
+    <div class="map-content">
+      <div style="display: -webkit-box;margin-top: 35px;";>
+        <!-- <div class="form-group">
+          <input type="text" class="form-control ng-pristine ng-valid ng-touched" style="height:34px;width: 108px;" placeholder="Enter keyword" ng-model="searchText" my-enter="getData();">
+        </div> -->
+        <div style="padding-left: 10px;">
+            <multiselect ng-model="bus" options="buslist" show-search="true" search-limit="5" show-select-all="true" show-unselect-all="true" data-ng-init="getData()">
+            </multiselect>
+        </div>
+        <div style="padding-left: 10px;">
+            <button class="form-control btn-success" type=submit data-ng-click="getData()">Apply</button>
+        </div>
+        <!-- <div style="padding-left: 10px;">
+            <h4 style="color:white"> Total Users : {{count}}</h6>
+        </div> -->
+      </div>
+    </div>
+    <div id="map" class="map">
+        <div id="google-map-default" class="height-full width-full"></div>
+    </div>
+</div>

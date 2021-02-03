@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" ng-app="colorAdminApp">
+<!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <title data-ng-bind="'VuScreen | ' + $state.current.data.pageTitle">VuScreen</title>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+  <meta content="" name="description" />
+  <meta content="" name="author" />
+  <base href="/">
+  <!-- ================== BEGIN BASE CSS STYLE ================== -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+  <link href="assets/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css" rel="stylesheet" />
+  <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/plugins/bootstrap-tour/build/css/bootstrap-tour.min.css" rel="stylesheet" />
+  <link href="assets/plugins/simple-line-icons/simple-line-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"/>
+  <!-- <link href="assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" /> -->
+  <link href="assets/css/animate.min.css" rel="stylesheet" />
+  <link href="assets/css/style.min.css" rel="stylesheet" />
+  <link href="assets/css/style-responsive.min.css" rel="stylesheet" />
+  <link href="assets/css/theme/default.css" rel="stylesheet" id="theme" />
+  <link href="assets/css/lodder.css" rel="stylesheet" />
+  <!-- ================== END BASE CSS STYLE ================== -->
+    
+  <!-- ================== BEGIN BASE JS ================== -->
+  <script src="assets/plugins/pace/pace.min.js"></script>
+  <!-- ================== END BASE JS ================== -->
+  <!-- ================== BEGIN PAGE LEVEL STYLE ================== -->
+  <link href="assets/plugins/bootstrap-wizard/css/bwizard.min.css" rel="stylesheet" />
+  <link href="assets/plugins/parsley/src/parsley.css" rel="stylesheet" />
+  <!-- ================== END PAGE LEVEL STYLE ================== -->
+
+
+  <!--[if lt IE 9]>
+      <script src="assets/crossbrowserjs/excanvas.min.js"></script>
+  <![endif]-->
+  
+  <!-- ================== BEGIN BASE ANGULAR JS ================== -->
+    <script src="assets/plugins/angularjs/v0.0.1/angular.min.js"></script>
+    <script src="assets/plugins/angularjs/angular-ui-route.min.js"></script>
+    <script src="assets/plugins/bootstrap-angular-ui/ui-bootstrap-tpls.min.js"></script>
+    <script src="assets/plugins/angularjs/ocLazyLoad.min.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-file-upload/dist/angular-file-upload.min.js"></script>
+    <script src="bower_components/console/console-sham.min.js"></script>
+    <script src="bower_components/angular-multiselect/angular-bootstrap-multiselect.min.js"></script>
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-68625297-13"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)};
+      gtag('js', new Date());
+
+      gtag('config', 'UA-68625297-13');
+    </script>
+    <!-- <script src="bower_components/angular-datatables/dist/plugins/bootstrapr/angular-datatables.bootstrap.min.js"></script>
+    <script src="bower_components/angular-datatables/dist/plugins/buttons/angular-datatables.buttons.min.js"></script> -->
+  <!-- ================== END BASE ANGULAR JS ================== -->
+</head>
+<body ng-controller="appController" ng-class="{'pace-top': setting.layout.paceTop, 'boxed-layout': setting.layout.pageBoxedLayout, 'bg-white': setting.layout.pageBgWhite }">
+    
+  <!-- begin #page-loader -->
+  <div id="page-loader" ng-controller="pageLoaderController" class="fade in"><span class="spinner"></span></div>
+  <!-- end #page-loader -->
+  
+  <!-- begin #page-container -->
+  <div id="page-container" class="page-container page-sidebar-fixed page-header-fixed fade in p-t-0"
+      ng-class="{
+          'page-sidebar-minified': setting.layout.pageSidebarMinified,
+          'page-content-full-height': setting.layout.pageContentFullHeight,
+          'page-footer-fixed': setting.layout.pageFixedFooter,
+          'page-with-right-sidebar': setting.layout.pageRightSidebar,
+          'page-sidebar-minified': setting.layout.pageSidebarMinified,
+          'page-with-two-sidebar': setting.layout.pageTwoSidebar,
+          'page-right-sidebar-toggled': setting.layout.pageTwoSidebar,
+          'page-with-top-menu': setting.layout.pageTopMenu,
+          'page-without-sidebar': setting.layout.pageWithoutSidebar,
+          'page-with-wide-sidebar': setting.layout.pageWideSidebar,
+          'page-with-light-sidebar': setting.layout.pageLightSidebar,
+          'p-t-0': setting.layout.pageWithoutHeader
+      }">
+      <div ui-view></div>
+  </div>
+  <!-- end page container -->
+  
+  
+  <!-- ================== BEGIN BASE JS ================== -->
+  <script src="assets/plugins/jquery/jquery-2.1.4.min.js"></script>
+  <script src="assets/plugins/jquery/jquery-migrate-1.1.0.min.js"></script>
+  <script src="assets/plugins/jquery-ui/ui/minified/jquery-ui.min.js"></script>
+  <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+  <!--[if lt IE 9]>
+    <script src="assets/crossbrowserjs/html5shiv.js"></script>
+    <script src="assets/crossbrowserjs/respond.min.js"></script>
+  <![endif]-->
+  <script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+  <script src="assets/plugins/jquery-cookie/jquery.cookie.js"></script>
+  <!-- ================== END BASE JS ================== -->
+  
+  <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+  <!-- initialize App  -->
+    <script src="app/app.js"></script>
+    <script src="app/app.controller.js"></script>
+    
+    <script src="assets/js/angular-setting.js"></script>
+    <script src="assets/js/angular-controller.js"></script>
+    <script src="assets/js/angular-directive.js"></script>
+    <script src="assets/js/angular-factory.js"></script>
+    <script src="assets/js/angular-cookie.js"></script>
+    <script src="assets/js/angular-services.js"></script>
+    <script src="assets/plugins/highcharts/highcharts.js"></script>
+    <script src="assets/plugins/highcharts/exporting.js"></script>
+    <script src="assets/plugins/highcharts/export-csv.js"></script>
+    <script src="assets/plugins/CollapTable/jquery.aCollapTable.min.js"></script>
+    <script src="assets/js/form-wizards-validation.demo.js"></script>
+    <script src="assets/js/apps.min.js"></script>
+
+
+      <!-- injector:js -->
+
+
+      <script src="app/account/account.js"></script>
+      <script src="app/account/login/login.controller.js"></script>
+      <script src="app/account/settings/settings.controller.js"></script>
+      <script src="app/account/signup/signup.controller.js"></script>
+
+      <script src="app/dashboard/dashboard.js"></script>
+      <script src="app/dashboard/dashboard.controller.js"></script>
+
+      <script src="app/vuScreen/vuScreen.js"></script>
+      <script src="app/vuScreen/vuScreen.controller.js"></script>
+
+      <script src="app/vuprime/vuprime.js"></script>
+      <script src="app/vuprime/vuprime.controller.js"></script>
+
+      <script src="app/map/map.js"></script>
+      <script src="app/map/map.controller.js"></script>
+
+      <script src="app/json/json.js"></script>
+      <script src="app/json/json.controller.js"></script>
+
+      <script src="app/brands/brand.js"></script>
+      <script src="app/brands/brand.controller.js"></script>
+
+      <script src="app/tambola/tambola.js"></script>
+      <script src="app/tambola/tambola.controller.js"></script>
+
+      <script src="app/flight/flight.js"></script>
+      <script src="app/flight/flight.controller.js"></script>
+
+      <script src="components/auth/auth.service.js"></script>
+      <script src="components/auth/user.service.js"></script>
+      <script src="components/mongoose-error/mongoose-error.directive.js"></script>
+      <script src="assets/plugins/DataTables/media/js/jquery.dataTables.min.js"></script>
+      <script src="assets/plugins/bootstrap-tour/build/js/bootstrap-tour.min.js"></script>
+      <script src="assets/plugins/bootstrap-daterangepicker/moment.js"></script>
+      <script src="assets/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+      <script src="bower_components/angular-datatables/dist/angular-datatables.min.js"></script>
+      <script src="assets/plugins/underscore/underscore-min.js"></script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDceUuy_GNVbSgK16QNXKPR3pRVuxv4iB8&libraries=places" type="text/javascript"></script>
+      <script src="app/map/markerclusterer.js"></script>
+      
+
+      <!-- endinjector -->
+  <!-- ================== END PAGE LEVEL JS ================== -->
+</body>
+</html>

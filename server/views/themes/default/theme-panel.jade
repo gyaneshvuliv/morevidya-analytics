@@ -1,0 +1,62 @@
+// begin theme-panel
+.theme-panel(ng-controller='themePanelController')
+  a.theme-collapse-btn(href='javascript:;', data-click='theme-panel-expand')
+    i.fa.fa-cog
+  .theme-panel-content
+    h5.m-t-0 Color Theme
+    ul.theme-list.clearfix
+      li.active
+        a.bg-green(href='javascript:;', data-theme='default', data-click='theme-selector', data-toggle='tooltip', data-trigger='hover', data-container='body', data-title='Default')  
+      li
+        a.bg-red(href='javascript:;', data-theme='red', data-click='theme-selector', data-toggle='tooltip', data-trigger='hover', data-container='body', data-title='Red')  
+      li
+        a.bg-blue(href='javascript:;', data-theme='blue', data-click='theme-selector', data-toggle='tooltip', data-trigger='hover', data-container='body', data-title='Blue')  
+      li
+        a.bg-purple(href='javascript:;', data-theme='purple', data-click='theme-selector', data-toggle='tooltip', data-trigger='hover', data-container='body', data-title='Purple')  
+      li
+        a.bg-orange(href='javascript:;', data-theme='orange', data-click='theme-selector', data-toggle='tooltip', data-trigger='hover', data-container='body', data-title='Orange')  
+      li
+        a.bg-black(href='javascript:;', data-theme='black', data-click='theme-selector', data-toggle='tooltip', data-trigger='hover', data-container='body', data-title='Black')  
+    .divider
+    .row.m-t-10
+      .col-md-5.control-label.double-line Header Styling
+      .col-md-7
+        select.form-control.input-sm(name='header-styling')
+          option(value='1') default
+          option(value='2') inverse
+    .row.m-t-10
+      .col-md-5.control-label Header
+      .col-md-7
+        select.form-control.input-sm(name='header-fixed')
+          option(value='1') fixed
+          option(value='2') default
+    .row.m-t-10
+      .col-md-5.control-label.double-line Sidebar Styling
+      .col-md-7
+        select.form-control.input-sm(name='sidebar-styling')
+          option(value='1') default
+          option(value='2') grid
+    .row.m-t-10
+      .col-md-5.control-label Sidebar
+      .col-md-7
+        select.form-control.input-sm(name='sidebar-fixed')
+          option(value='1') fixed
+          option(value='2') default
+    .row.m-t-10
+      .col-md-5.control-label.double-line Sidebar Gradient
+      .col-md-7
+        select.form-control.input-sm(name='content-gradient')
+          option(value='1') disabled
+          option(value='2') enabled
+    .row.m-t-10
+      .col-md-5.control-label.double-line Content Styling
+      .col-md-7
+        select.form-control.input-sm(name='content-styling')
+          option(value='1') default
+          option(value='2') black
+    .row.m-t-10
+      .col-md-12
+        a.btn.btn-inverse.btn-block.btn-sm(href='#', data-click='reset-local-storage')
+          i.fa.fa-refresh.m-r-3
+          |  Reset Local Storage
+// end theme-panel

@@ -1,0 +1,35 @@
+// begin #header
+div(ng-include='', src="'/app/header'")
+// end #header
+div(ng-if='setting.layout.pageTopMenu')
+  // begin #top-menu
+  div(ng-include='', src="'template/top-menu.html'")
+  // end #top-menu
+div(ng-if='setting.layout.pageWithoutSidebar === false')
+  // begin #sidebar
+  div(ng-include='', src="'/app/sidebar'")
+  // end #sidebar
+// begin #content
+#content.content(view-content='', ng-class="{ \
+'content-full-width': setting.layout.pageContentFullWidth, \
+'height-full': setting.layout.pageContentFullHeight, \
+'content-inverse-mode': setting.layout.pageContentInverseMode \
+}")
+  div(ui-view='')
+// end #content
+div(ng-if='setting.layout.pageWithFooter === true')
+  // begin #footer
+  #footer.footer
+    | © 2014 Color Admin Responsive Admin Template - Sean Ngu All Rights Reserved
+  // end #footer
+div(ng-if='setting.layout.pageTwoSidebar === true')
+  // begin #sidebar-right
+  div(ng-include='', src="'template/sidebar-right.html'")
+  // end #sidebar-right
+// begin #theme-panel
+div(ng-include='', src="'/app/theme-panel'")
+// end #theme-panel
+// begin scroll to top btn
+a.btn.btn-icon.btn-circle.btn-success.btn-scroll-to-top.fade(href='javascript:;', data-click='scroll-top')
+  i.fa.fa-angle-up
+// end scroll to top btn

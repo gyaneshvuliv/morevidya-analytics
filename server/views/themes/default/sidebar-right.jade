@@ -1,0 +1,60 @@
+// begin #sidebar-right
+#sidebar-right.sidebar.sidebar-right(ng-controller='rightSidebarController')
+  // begin sidebar scrollbar
+  div(data-scrollbar='true', data-height='100%')
+    // begin sidebar user
+    ul.nav.m-t-10
+      li.nav-widget
+        p Server Status
+        .pull-left.m-b-10.m-t-5
+          .pull-left.p-r-15
+            input.knob(data-width='80', data-height='80', data-thickness='.2', data-readonly='true', data-min='10', data-displayprevious='true', value='44', data-fgcolor='#00acac', data-bgcolor='#242a30')
+          .pull-left
+            input.knob(data-width='80', data-height='80', data-thickness='.2', data-readonly='true', data-min='10', data-displayprevious='true', value='67', data-fgcolor='#348fe2', data-bgcolor='#242a30')
+        .pull-left
+          .pull-left.p-r-15
+            input.knob(data-width='80', data-height='80', data-thickness='.2', data-readonly='true', data-min='10', data-displayprevious='true', value='70', data-fgcolor='#ff5b57', data-bgcolor='#242a30')
+          .pull-left
+            input.knob(data-width='80', data-height='80', data-thickness='.2', data-readonly='true', data-min='10', data-displayprevious='true', value='52', data-fgcolor='#727cb6', data-bgcolor='#242a30')
+      li.nav-widget
+        p.m-b-5 Total Visitors
+        #sidebar-sparkline-1.m-b-10
+        p.m-b-5 Total Page Views
+        #sidebar-sparkline-2.m-b-10
+        p.m-b-5 Total Unique Visitors
+        #sidebar-sparkline-3.m-b-10
+        p.m-b-5 Bounce Rate
+        #sidebar-sparkline-4
+      li.nav-widget
+        #accordion.panel-group.m-b-0
+          .panel.panel-inverse
+            .panel-heading
+              h3.panel-title
+                a.accordion-toggle.accordion-toggle-styled.collapsed(data-toggle='collapse', data-parent='#accordion', href='#collapseOne')
+                  i.fa.fa-plus-circle.pull-right.text-success
+                  |                                     Accordion #1
+            #collapseOne.panel-collapse.collapse
+              .panel-body
+                | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+          .panel.panel-inverse
+            .panel-heading
+              h3.panel-title
+                a.accordion-toggle.accordion-toggle-styled.collapsed(data-toggle='collapse', data-parent='#accordion', href='#collapseTwo')
+                  i.fa.fa-plus-circle.pull-right.text-success
+                  |                                     Accordion #2
+            #collapseTwo.panel-collapse.collapse
+              .panel-body
+                | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+          .panel.panel-inverse
+            .panel-heading
+              h3.panel-title
+                a.accordion-toggle.accordion-toggle-styled.collapsed(data-toggle='collapse', data-parent='#accordion', href='#collapseThree')
+                  i.fa.fa-plus-circle.pull-right.text-success
+                  |                                     Accordion #3
+            #collapseThree.panel-collapse.collapse
+              .panel-body
+                | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+    // end sidebar user
+  // end sidebar scrollbar
+.sidebar-bg.sidebar-right
+// end #sidebar-right

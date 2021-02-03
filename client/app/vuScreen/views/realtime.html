@@ -1,0 +1,47 @@
+<div ng-controller="realtimeController">
+    <!-- begin breadcrumb -->
+    <ol class="breadcrumb pull-right">
+        <li><a href="javascript:;">Home</a></li>
+        <li><a href="javascript:;">Event</a></li>
+        <li class="active">Analysis</li>
+    </ol>
+    <!-- end breadcrumb -->
+    <!-- begin page-header -->
+    <h1 class="page-header">Real Time Analysis<small> All events will be synced in 15-20 seconds</small></h1>
+    <!-- end page-header -->
+    <!-- include the campaign view graph date wise  -->
+    <div class="form-group">
+        <input type="text" class="form-control ng-pristine ng-valid ng-touched" placeholder="Search by Device id" ng-model="searchText" my-enter="searchinAll();">
+    </div>
+    <div class="panel panel-inverse panel-with-tabs" data-sortable-id="ui-unlimited-tabs-1">
+        <div class="panel-heading p-0">
+            <div class="panel-heading-btn m-r-10 m-t-10">
+                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+            </div>
+            <div class="tab-overflow">
+                <ul class="nav nav-tabs nav-tabs-inverse">
+                    <li class="prev-button"><a href="javascript:;" data-click="prev-tab" class="text-success"><i class="fa fa-arrow-left"></i></a></li>
+                    <!-- <li class="active" ><a href="#" data-target="#nav-tab-1" data-toggle="tab">App Launch</a></li> -->
+                    <li class="active"><a href="#" data-target="#nav-tab-4" data-toggle="tab">Play</a></li>
+                    <li class=""><a href="#" data-target="#nav-tab-5" data-toggle="tab">Events</a></li>
+                    <li class=""><a href="#" data-target="#nav-tab-8" data-toggle="tab">Ads</a></li>
+                    <li class="next-button"><a href="javascript:;" data-click="next-tab" class="text-success"><i class="fa fa-arrow-right"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="tab-content">
+            <!-- <div class="tab-pane fade active in" id="nav-tab-1">
+                <div class="row" ng-include src="'app/events/applaunch/realtime.html'"></div>
+            </div> -->
+            <div class="tab-pane fade active in" id="nav-tab-4">
+                <div class="row" ng-include src="'app/vuScreen/views/playrealtime.html'"></div>
+            </div>
+            <div class="tab-pane fade" id="nav-tab-5">
+                <div class="row" ng-include src="'app/vuScreen/views/eventrealtime.html'"></div>
+            </div>
+            <div class="tab-pane fade" id="nav-tab-8">
+                <div class="row" ng-include src="'app/vuScreen/views/adsrealtime.html'"></div>
+            </div>
+        </div>
+    </div>
+</div>
